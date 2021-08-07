@@ -1,0 +1,135 @@
+// hisSec
+.hisSec {
+    $this: '.hisSec';
+    margin-top: 100px;
+
+    &__inner {
+        margin: auto;
+        max-width: 1230px;
+        padding: 0 15px;
+    }
+
+    // TREE AREA
+
+    &__startText,
+    &__endText {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 900;
+    }
+
+    &__tree {
+        margin: 100px auto;
+        display: flex;
+        flex-flow: nowrap;
+    }
+
+    &__treeLeft,
+    &__treeMid,
+    &__treeRight {
+        width: 100%;
+    }
+
+    &__treeMid {
+        max-width: 1px;
+    }
+
+    &__treeItem {
+        border-bottom: 2px solid $black;
+
+        &.u-leftSide {
+            #{$this}__treeItemList {
+                padding-left: 10px;
+            }
+
+            #{$this}__treeItemYrText {
+                text-align: right;
+            }
+
+            #{$this}__treeItemYrArea {
+                padding-right: 20px;
+            }
+
+            &:nth-child(n+2) {
+                margin-top: 100px;
+            }
+        }
+
+        &.u-rightSide {
+            #{$this}__treeItemList {
+                padding-right: 10px;
+                justify-content: flex-start;
+                flex-direction: row-reverse;
+            }
+
+            #{$this}__treeItemCntArea {
+                text-align: right;
+            }
+
+            #{$this}__treeItemYrArea {
+                padding-left: 20px;
+            }
+
+            &:nth-child(n+1) {
+                margin-top: 100px;
+            }
+        }
+    }
+
+    &__treeItemList {
+        padding: 20px 0 10px;
+        display: flex;
+        flex-flow: nowrap;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__treeItemYrArea {
+        width: 100px;
+    }
+
+    &__treeItemCntArea {
+        width: calc(100% - 100px);
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    &__treeMid {
+        margin-right: -1px;
+        border-left: 2px solid $black;
+    }
+
+    &__treeItemCntTitleText {
+        font-weight: 400;
+        word-break: break-all;
+    }
+
+    &__treeItemCntLosText {
+        color: $gray;
+        word-break: break-all;
+    }
+
+    &__treeItemYrText {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    // END OF TREE AREA
+
+    &__goalList {
+        margin-top: 30px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    &__goalItem {
+        font-size: 1.2rem;
+        font-weight: 300;
+        box-sizing: border-box;
+
+        &:nth-child(2) {
+            padding: 0 100px;
+        }
+    }
+}

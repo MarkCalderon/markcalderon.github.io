@@ -1,0 +1,72 @@
+.tooSec {
+    $this: &;
+    margin-top: 100px;
+    padding: 67px 0;
+    background-color: $lightgray;
+
+    &__inner {
+        margin: auto;
+        max-width: 1230px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        max-height: 0;
+        transition: 1s ease-in-out;
+        overflow: hidden;
+
+        &.u-isToggle {
+            padding-top: 15px;
+            max-height: 500px;
+        }
+    }
+
+    &__listItem {
+        margin-top: 40px;
+        width: calc(100% / 2 - 15px);
+
+        &:nth-child(2n) {
+            margin-left: 30px;
+        }
+    }
+
+    &__listItemTitleText {
+        padding-bottom: 5px;
+        font-size: 16px;
+        font-weight: 900;
+        border-bottom: 2px solid $black;
+        text-align: center;
+    }
+
+    &__innerList {
+        margin-top: 4px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__innerListCol {
+        width: calc(100% / 2);
+    }
+
+    &__innerListColItem {
+        margin-top: 11px;
+        font-size: 16px;
+        font-weight: 300;
+
+        &.u-sec01Level {
+            padding-left: 20px;
+        }
+    }
+
+    &__innerListItem {
+        width: 50%;
+        margin-top: 11px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+$Roboto: 'Roboto', sans-serif;
+
+$gray: #A09E9E;
+$black: #000;
+$white: #fff;
+$lightgray: #F1F1F1;
+$darkgray: #C1C1C1;
+$red: #F53B3B;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+ul {
+    list-style: none;
+}
+
+input, textarea {
+    font-family: $Roboto;
+}
+
+// light 300
+// regular 400
+// black 900
+
+body {
+    font-family: $Roboto;
+    font-size: 62.5%;
+    line-height: 1.5;
+}
+
+// titleBlock
+.titleBlock {
+    padding: 5px 20px;
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    border: 1px solid $gray;
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-block;
+    box-shadow: 1px 1px 20px 5px rgba(lightgray, .4);
+
+    &.u-aCenter {
+        margin: auto;
+        display: block;
+    }
+
+    &.u-logo {
+        padding: 0;
+        margin: auto;
+        display: inline-block;
+        width: auto;
+        max-width: 100px;
+        font-size: 2rem;
+        border: 0;
+        transition: 1s ease;
+        cursor: pointer;
+        box-shadow: none;
+
+        &:hover {
+            opacity: 0.3;
+        }
+
+        span {
+            pointer-events: none;
+        }
+    }
+}
+
+@import './risingBall';
+@import './kvSec';
+@import './hisSec';
+@import './proSec';
+@import './achSec';
+@import './tooSec';
+@import './conSec';
