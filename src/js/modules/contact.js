@@ -1,6 +1,6 @@
 export const contact = () => {
     let form = document.getElementById('form');
-    // let email, type, phone, name, message;
+    // let popup = document.getElementById('popup')
     var pristine = new Pristine(form, {
         classTo: 'conSec__tableTd',
         errorTextParent: 'conSec__tableTd',
@@ -10,20 +10,46 @@ export const contact = () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // email = form.elements['input-email'].value;
-        // name = form.elements['input-name'].value;
-        // phone = form.elements['input-phone'].value;
-        // type = form.elements['input-type'].value;
-        // message = form.elements['input-message'].value;
+        let valid = pristine.validate(); // returns true or false
 
-        var valid = pristine.validate(); // returns true or false
+        if(valid) {
+            let email = form.elements['input-email'].value;
+            let name = form.elements['input-name'].value;
+            let type = form.elements['input-type'].value;
+            let body = form.elements['input-message'].value;
 
-        // if(valid) {
-        //     form.submit()
-        //     console.log('pass');
-        // }
-        // else {
-        //     console.log('fail');
-        // }
+            // To Recipient
+            Email.send({
+                SecureToken: "6fb550bd-7231-4867-9fc0-0e61d85f4ccc",
+                To : 'markcev0@gmail.com',
+                From : email,
+                Subject : `[INQUIRY] from ${name} `,
+                Body :  `
+                            Name: ${name}<br>
+                            Email: ${email}<br>
+                            Inquiry type: ${type}<br>
+                            Message: ${body}
+                        `
+            }).then(
+                // Response for Sender
+                Email.send({
+                    SecureToken: "6fb550bd-7231-4867-9fc0-0e61d85f4ccc",
+                    To : email,
+                    From : 'markcev0@gmail.com',
+                    Subject : `[INQUIRY RECEIPT] from ${name} `,
+                    Body :  `
+                                Your email is successfully received.<br>
+                                Expect a response within 1 week.
+                            `
+                }).then(()=> {
+                    popup.classList.add('is-submit')
+                        setTimeout(() => {
+                            popup.classList.remove('is-submit')
+                            form.reset()
+                        }, 2000);
+                    }
+                )
+            );
+        }
     })
 }

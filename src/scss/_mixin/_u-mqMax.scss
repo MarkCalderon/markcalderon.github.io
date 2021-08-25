@@ -1,0 +1,5 @@
+@mixin u-mqMax($mw: $mw) {
+    @media screen and (max-width: $mw) {
+        @content;
+    }
+}

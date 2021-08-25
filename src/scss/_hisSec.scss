@@ -1,7 +1,11 @@
 // hisSec
 .hisSec {
     $this: '.hisSec';
-    margin-top: 100px;
+    border-top: 10px solid $black;
+    padding-top: 100px;
+    @include u-mqMax {
+        margin-top: 20px;
+    }
 
     &__inner {
         margin: auto;
@@ -14,14 +18,22 @@
     &__startText,
     &__endText {
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 2.5rem;
         font-weight: 900;
     }
 
+    &__endText {
+        margin-top: 250px;
+    }
+
     &__tree {
-        margin: 100px auto;
+        margin: 100px auto 0;
         display: flex;
         flex-flow: nowrap;
+        @include u-mqMax {
+            margin: 20px auto;
+            flex-direction: column;
+        }
     }
 
     &__treeLeft,
@@ -35,43 +47,121 @@
     }
 
     &__treeItem {
-        border-bottom: 2px solid $black;
+        position: relative;
+        @include u-mqMax {
+            padding-bottom: 15px;
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
 
         &.u-leftSide {
+
+            &:before {
+                right: 0;
+                width: 2px;
+                height: 0;
+                background-color: $black;
+                transition: 2s linear;
+            }
+
+            &:after {
+                right: 0;
+                width: 0;
+                height: 2px;
+                background-color: $black;
+                transition: 2s linear;
+            }
+
             #{$this}__treeItemList {
                 padding-left: 10px;
+                @include u-mqMax {
+                    padding-left: 0;
+                }
             }
 
             #{$this}__treeItemYrText {
                 text-align: right;
+                @include u-mqMax {
+                    text-align: left;
+                }
             }
 
             #{$this}__treeItemYrArea {
                 padding-right: 20px;
+                @include u-mqMax {
+                    padding-right: 0;
+                }
             }
 
             &:nth-child(n+2) {
-                margin-top: 100px;
+                padding-top: 100px;
+                @include u-mqMax {
+                    padding-top: 15px;
+                }
             }
         }
 
         &.u-rightSide {
+            margin-left: -2px;
+
+            &:before {
+                content: '';
+                left: 0;
+                width: 2px;
+                height: 0;
+                background-color: $black;
+                transition: 2s linear;
+            }
+
+            &:after {
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $black;
+                transition: 2s linear;
+            }
+
             #{$this}__treeItemList {
                 padding-right: 10px;
                 justify-content: flex-start;
                 flex-direction: row-reverse;
+                @include u-mqMax {
+                    padding-right: 0;
+                    flex-direction: column-reverse;
+                }
             }
 
             #{$this}__treeItemCntArea {
                 text-align: right;
+                @include u-mqMax {
+                    text-align: left;
+                }
             }
 
             #{$this}__treeItemYrArea {
                 padding-left: 20px;
+                @include u-mqMax {
+                    padding-left: 0;
+                }
             }
 
             &:nth-child(n+1) {
                 margin-top: 100px;
+                @include u-mqMax {
+                    margin-top: 15px;
+                }
             }
         }
     }
@@ -82,16 +172,27 @@
         flex-flow: nowrap;
         width: 100%;
         box-sizing: border-box;
+        @include u-mqMax {
+            padding: 0;
+            flex-direction: column-reverse;
+        }
     }
 
     &__treeItemYrArea {
         width: 100px;
+        @include u-mqMax {
+            width: 100%;
+        }
     }
 
     &__treeItemCntArea {
         width: calc(100% - 100px);
         font-weight: 300;
         font-size: 1rem;
+        @include u-mqMax {
+            width: 100%;
+            font-size: 0.8rem;
+        }
     }
 
     &__treeMid {
@@ -117,19 +218,54 @@
     // END OF TREE AREA
 
     &__goalList {
-        margin-top: 30px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        margin-top: 80px;
     }
 
     &__goalItem {
+        max-width: 550px;
         font-size: 1.2rem;
         font-weight: 300;
         box-sizing: border-box;
 
-        &:nth-child(2) {
-            padding: 0 100px;
+        &:not(:first-child) {
+            margin-top: -150px;
         }
+
+        &.u-right {
+            margin-left: auto;
+        }
+
+        &.u-left {
+            text-align: right;
+
+            #{$this}__goalItemTitleText {
+                &:before {
+                    left: 0;
+                    right: auto;
+                }
+            }
+        }
+    }
+
+    &__goalItemTitleText {
+        font-size: 2rem;
+        display: inline-block;
+        position: relative;
+        opacity: 0;
+        transition: 2s 1s ease;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            transition: 2s 1s ease;
+        }
+    }
+
+    &__goalItemFigureArea {
     }
 }

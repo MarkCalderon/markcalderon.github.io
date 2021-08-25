@@ -1,20 +1,20 @@
 .conSec {
     margin-top: 64px;
     padding-bottom: 159px;
-    position: relative;
     $this: &;
+    position: relative;
+    overflow: hidden;
 
     &__formLegendText {
         font-size: 1rem;
     }
 
-    &:after {
-        content: '';
+    &__bg {
         position: absolute;
+        left: 0;
         bottom: 0;
-        height: 463px;
         width: 100%;
-        background-color: $darkgray;
+        height: 463px;
         background: center / cover no-repeat url('../img/con/bg.jpg');
     }
 
@@ -28,7 +28,7 @@
     }
 
     &__listLink {
-        margin-top: 20px;
+        margin-top: 30px;
         display: flex;
         justify-content: center;
     }

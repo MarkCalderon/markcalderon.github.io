@@ -7,8 +7,8 @@
     "copy:img": "cpx \"src/img/**/*\" build/_assets/img/",
     "copy:lib": "cpx \"src/lib/**/*\" build/_assets/lib/",
     "copy:docs": "cpx \"src/docs/**/*\" build/_assets/docs/",
-    "watch:img": "chokidar \"src/img/**/*\" -c \"copy:img\"",
-    "watch:lib": "chokidar \"src/lib/**/*\" -c \"copy:lib\"",
+    "watch:img": "chokidar \"src/img/**/*\" -c \"npm run copy:img\"",
+    "watch:lib": "chokidar \"src/lib/**/*\" -c \"npm run copy:lib\"",
     "build:scss": "sass --style=compressed --color \"src/scss/main.scss\" \"build/_assets/css/main.css\" ",
     "build:pug": "pug --pretty \"src/pug\" --out \"build/\" ",
     "build:js": "webpack --config config/webpack.config.js",
@@ -29,8 +29,13 @@
     "chokidar-cli": "^2.1.0",
     "cpx": "^1.5.0",
     "npm-run-all": "^4.1.5",
+    "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.35.2",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "simple-parallax-js": "^5.6.2"
   }
 }

@@ -1,0 +1,76 @@
+.introSec {
+    $this: &;
+
+    &__inner {
+        position: relative;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    &__innerRightCut {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        padding-top: 100%;
+        background-color: $lightgray;
+        transition: 1.5s ease;
+    }
+
+    &__innerLeftCut {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        padding-bottom: 100%;
+        background-color: $lightgray;
+        transition: 1.5s ease;
+    }
+
+    &__textArea {
+        text-align: center;
+    }
+
+    &__headTitle {
+        font-size: 4rem;
+        font-weight: 600;
+        font-family: $Oswald;
+        text-transform: uppercase;
+        letter-spacing: -0.06em;
+    }
+
+    &__subTitle {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__galArea {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__figureArea {
+        &:nth-child(2) {
+            margin: 0 40px;
+        }
+
+        &.u-figure01 {
+            max-width: 300px;
+        }
+
+        &.u-figure02 {
+            max-width: 330px;
+        }
+
+        &.u-figure03 {
+            max-width: 300px;
+        }
+    }
+}

@@ -1,3 +1,7 @@
+- let relativePath = '.'
+
+include _inc/_data.pug
+
 doctype html
 html(lang="en")
     head
@@ -7,172 +11,143 @@ html(lang="en")
         title MARK CALDERON
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous")
-        link(rel="stylesheet" href="./_assets/css/main.css")
+        link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+        link(rel="stylesheet" href=`${relativePath}/_assets/css/main.css`)
     body
-        header
         main
             section.kvSec
-                .kvSec__inner.js-panoCon
-                    .kvSec__innerBg.js-panoObj
+                .kvSec__inner
+                    figure.kvSec__figureBg.js-panoObj
+                        img.kvSec__figureBgThumb(src=`${relativePath}/_assets/img/kv/kv.png` alt="kv")
                     figure.kvSec__figureArea
-                        img.kvSec__figureThumb(src="./_assets/img/common/logo.svg" alt="logo")
-                    //- .risingBallScene
-                    //-     .ball
-                    //-     .ball
-                    //-     .ball
-                    //-     .ball
-                    //-     .ball
-                    //-     .ball
-                    //-     .ball
-                    //-     .ball
-                    //-     .ball
-                    //-     .ball
+                        img.kvSec__figureThumb(src=`${relativePath}/_assets/img/common/logo.svg` alt="logo")
+            header.headerSec
+            section.introSec
+                .introSec__inner(data-aos="intro-anim")
+                    .introSec__innerRightCut
+                    .introSec__innerLeftCut
+                    .introSec__textArea
+                        h1.introSec__headTitle(data-aos="fade" data-aos-delay="1000") Mark Angeo Calderon
+                        p.introSec__subTitle(data-aos="fade" data-aos-delay="1000") A Web Developer
+                    .introSec__galArea
+                        figure.introSec__figureArea(class="u-figure03" data-aos="fade" data-aos-delay="1000")
+                            img.introSec__figureThumb(src=`${relativePath}/_assets/img/thumb-03.png` alt="thumb")
+                        figure.introSec__figureArea(class="u-figure01" data-aos="fade" data-aos-delay="1000")
+                            img.introSec__figureThumb(src=`${relativePath}/_assets/img/thumb-01.png` alt="thumb")
+                        figure.introSec__figureArea(class="u-figure02" data-aos="fade" data-aos-delay="1000")
+                            img.introSec__figureThumb(src=`${relativePath}/_assets/img/thumb-02.png` alt="thumb")
             section.hisSec
                 .hisSec__inner
-                    p.hisSec__startText CAREER PATHWAY
-                    // hisSec__tree
+                    p.hisSec__startText(data-aos="zoom-out") CAREER PATHWAY
                     .hisSec__tree
                         |
                         |
                         .hisSec__treeLeft
                             |
                             |
-                            .hisSec__treeItem(class="u-leftSide")
+                            .hisSec__treeItem(class="u-leftSide" data-aos="grow-line")
                                 .hisSec__treeItemList
-                                    .hisSec__treeItemCntArea
+                                    .hisSec__treeItemCntArea(data-aos="fade")
                                         p.hisSec__treeItemCntTitleText
                                             | GRADUATE HONOURS STUDENT
                                             br
-                                            | BACHELOR OF SCIENCE (HONOURS) IN COMPUTER SCIENCE AND SOFTWARE ENGINEERING
+                                            | BACHELOR OF SCIENCE (HONOURS) IN COMPUTER SCIENCE
+                                            br
+                                            | AND SOFTWARE ENGINEERING
                                         p.hisSec__treeItemCntLosText
                                             | OXFORD BROOKES UNIVERSITY @ SINGAPORE
-                                    .hisSec__treeItemYrArea
+                                    .hisSec__treeItemYrArea(data-aos="fade")
                                         p.hisSec__treeItemYrText
                                             | 2010-2014
                             |
                             |
-                            .hisSec__treeItem(class="u-leftSide")
+                            .hisSec__treeItem(class="u-leftSide" data-aos="grow-line")
                                 .hisSec__treeItemList
-                                    .hisSec__treeItemCntArea
+                                    .hisSec__treeItemCntArea(data-aos="fade")
                                         p.hisSec__treeItemCntTitleText
                                             | JUNIOR FRONT-END WEB DEVELOPER
                                         p.hisSec__treeItemCntLosText
                                             | COMMUDE PHILIPPINES INC.
-                                    .hisSec__treeItemYrArea
+                                    .hisSec__treeItemYrArea(data-aos="fade")
                                         p.hisSec__treeItemYrText
                                             | 2019
                         |
                         |
-                        .hisSec__treeMid
+                        //- .hisSec__treeMid
                         |
                         |
                         .hisSec__treeRight
                             |
                             |
-                            .hisSec__treeItem(class="u-rightSide")
+                            .hisSec__treeItem(class="u-rightSide" data-aos="grow-line")
                                 .hisSec__treeItemList
-                                    .hisSec__treeItemCntArea
+                                    .hisSec__treeItemCntArea(data-aos="fade")
                                         p.hisSec__treeItemCntTitleText
                                             | INFORMATION & COMMUNICATIONS
                                             br
                                             | AND TECHNOLOGY TEACHER
                                         p.hisSec__treeItemCntLosText
                                             | SERI MULIA SARJANA INTERNATIONAL SCHOOL
-                                    .hisSec__treeItemYrArea
+                                    .hisSec__treeItemYrArea(data-aos="fade")
                                         p.hisSec__treeItemYrText
                                             | 2015-2019
                             |
                             |
-                            .hisSec__treeItem(class="u-rightSide")
+                            .hisSec__treeItem(class="u-rightSide" data-aos="grow-line")
                                 .hisSec__treeItemList
-                                    .hisSec__treeItemCntArea
+                                    .hisSec__treeItemCntArea(data-aos="fade")
                                         p.hisSec__treeItemCntTitleText
                                             | TEAM LEAD&nbsp; | &nbsp;FRONT-END WEB DEVELOPER
                                         p.hisSec__treeItemCntLosText
                                             | COMMUDE PHILIPPINES INC.
-                                    .hisSec__treeItemYrArea
+                                    .hisSec__treeItemYrArea(data-aos="fade")
                                         p.hisSec__treeItemYrText
                                             | 2021
                     // / hisSec__tree
-                    p.hisSec__endText
-                        | CONTINUING
-                        br
-                        | GOALS
+                    p.hisSec__endText(data-aos="zoom-out")
+                        | SOFT SKILLS
                     ul.hisSec__goalList
-                        li.hisSec__goalItem COMPETENT
-                        li.hisSec__goalItem TEAM PLAYER
-                        li.hisSec__goalItem SUSTAINABLE
+                        li.hisSec__goalItem(class="u-right")
+                            .hisSec__goalItemTextArea
+                                h3.hisSec__goalItemTitleText(data-aos="wipe-right")  COMPETENT
+                                figure.hisSec__goalItemFigureArea(data-aos="fade-right")
+                                    img.hisSec__goalItemFigureThumb(src=`https://via.placeholder.com/550x270`)
+                                p.hisSec__goalItemParaText(data-aos="fade")
+                                    | A diverse set of skills that build up a quality product.
+                        li.hisSec__goalItem(class="u-left")
+                            .hisSec__goalItemTextArea
+                                h3.hisSec__goalItemTitleText(data-aos="wipe-left")  TEAM PLAYER
+                                figure.hisSec__goalItemFigureArea(data-aos="fade-left")
+                                    img.hisSec__goalItemFigureThumb(src=`https://via.placeholder.com/550x270`)
+                                p.hisSec__goalItemParaText(data-aos="fade")
+                                    | Worked with individuals of different cultures
+                        li.hisSec__goalItem(class="u-right")
+                            .hisSec__goalItemTextArea
+                                h3.hisSec__goalItemTitleText(data-aos="wipe-right") SUSTAINABLE
+                                figure.hisSec__goalItemFigureArea(data-aos="fade-right")
+                                    img.hisSec__goalItemFigureThumb(src=`https://via.placeholder.com/550x270`)
+                                p.hisSec__goalItemParaText(data-aos="fade")
+                                    | With the mindset of an educator that pushes towards progression and understanding.
             |
             |
             section.proSec
-                .proSec__inner
+                .proSec__inner(data-aos="fade-up")
                     h2.titleBlock PROJECTS
-                    ul.proSec__list
-                        |
-                        |
-                        li.proSec__item
-                            a.proSec__itemAnchor(href="https://dependent-soap.surge.sh/" target="_blank")
-                                figure.proSec__itemImageArea
-                                    .proSec__itemImageThumb(style="background-image: url('./_assets/img/projects/x.png');")
-                                .proSec__itemTextArea
-                                    p.proSec__itemTitleText
-                                        span.proSec__itemTitleText Project X
-                                        span.proSec__itemLabel.u-client Client
-                                    p.proSec__itemParaText It is a project to discuss the difficulties and potential interest in the night life industry.
-                        li.proSec__item
-                            a.proSec__itemAnchor(href="http://e-yo.main.jp/mizumawari24hv3/" target="_blank")
-                                figure.proSec__itemImageArea
-                                    .proSec__itemImageThumb(style="background-image: url('./_assets/img/projects/24h.png');")
-                                .proSec__itemTextArea
-                                    p.proSec__itemTitleText
-                                        span.proSec__itemTitleText Mizumawari24H
-                                        span.proSec__itemLabel.u-client Client
-                                    p.proSec__itemParaText It is a campaign page to show support for water services and the effects of the COVID-19 pandemic.
-                        li.proSec__item
-                            a.proSec__itemAnchor(href="https://distinct-mountain.surge.sh/" target="_blank")
-                                figure.proSec__itemImageArea
-                                    .proSec__itemImageThumb(style="background-image: url('./_assets/img/projects/rouland.png');")
-                                .proSec__itemTextArea
-                                    p.proSec__itemTitleText
-                                        span.proSec__itemTitleText Rouland
-                                        span.proSec__itemLabel.u-client Client
-                                    p.proSec__itemParaText It is a project that serves as a landing page for hair salon business.
-                        li.proSec__item
-                            a.proSec__itemAnchor(href="https://puller.asia/" target="_blank")
-                                figure.proSec__itemImageArea
-                                    .proSec__itemImageThumb(style="background-image: url('./_assets/img/projects/puller.png');")
-                                .proSec__itemTextArea
-                                    p.proSec__itemTitleText
-                                        span.proSec__itemTitleText Puller.asia
-                                        span.proSec__itemLabel.u-client Client
-                                    p.proSec__itemParaText It is a product landing page of a popular pet product supplier.
-                        li.proSec__item
-                            a.proSec__itemAnchor(href="https://fortunate-wind.surge.sh/" target="_blank")
-                                figure.proSec__itemImageArea
-                                    .proSec__itemImageThumb(style="background-image: url('./_assets/img/projects/blueled.png');")
-                                .proSec__itemTextArea
-                                    p.proSec__itemTitleText
-                                        span.proSec__itemTitleText Blueled
-                                        span.proSec__itemLabel.u-client Client
-                                    p.proSec__itemParaText It is a project to showcase information about a insurance agency.
-                        li.proSec__item
-                            a.proSec__itemAnchor(href="https://private-stranger.surge.sh/" target="_blank")
-                                figure.proSec__itemImageArea
-                                    .proSec__itemImageThumb(style="background-image: url('./_assets/img/projects/kanamachi.png');")
-                                .proSec__itemTextArea
-                                    p.proSec__itemTitleText
-                                        span.proSec__itemTitleText Kanamachi
-                                        span.proSec__itemLabel.u-client Client
-                                    p.proSec__itemParaText It is a landing page for a dental agency.
-                        li.proSec__item
-                            a.proSec__itemAnchor(href="https://beautiful-passenger.surge.sh/" target="_blank")
-                                figure.proSec__itemImageArea
-                                    .proSec__itemImageThumb(style="background-image: url('./_assets/img/projects/placeschooler.png');")
-                                .proSec__itemTextArea
-                                    p.proSec__itemTitleText
-                                        span.proSec__itemTitleText Placeschooler
-                                        span.proSec__itemLabel PERSONAL
-                                    p.proSec__itemParaText It is a landing page built using React.
+                    ul.proSec__list(id="project-list")
+                        - var i=1
+                        each item, index in projectList
+                            li.proSec__item(data-aos="fade" data-aos-delay=`${i + '00'}`)
+                                a.proSec__itemAnchor(href=`${item.link}` target="_blank")
+                                    figure.proSec__itemImageArea
+                                        .proSec__itemImageThumb(style="background-image: url('" + `${relativePath}` + "/_assets/img/projects/" + `${item.image}` + "')")
+                                    .proSec__itemTextArea
+                                        p.proSec__itemTitleText
+                                            span.proSec__itemTitleText=item.title
+                                            span.proSec__itemLabel(class=item.labelClass) #{item.label}
+                                        p.proSec__itemParaText #{item.desc}
+                            - i++
+                    //- .proSec__more
+                        a.proSec__moreAnchor(data-more="project-list") SHOW MORE
             //- |
             //- |
             //- section.achSec
@@ -252,11 +227,12 @@ html(lang="en")
             |
             |
             section.conSec
+                .conSec__bg.js-panoObj
                 .conSec__inner
                     h2.titleBlock.u-aCenter CONTACT US
                     ul.conSec__listLink
                         li.conSec__listLinkItem
-                            a.conSec__listLinkAnchor(href="./_assets/docs/resume.docx" target="_blank" rel="noopener noreferrer")
+                            a.conSec__listLinkAnchor(href=`${relativePath}/_assets/docs/resume.docx` target="_blank" rel="noopener noreferrer")
                                 span.material-icons contact_page
                         li.conSec__listLinkItem
                             a.conSec__listLinkAnchor(href="https://www.linkedin.com/in/markcalderon/" target="_blank" rel="noopener noreferrer")
@@ -302,10 +278,10 @@ html(lang="en")
                                             span.conSec__requiredText REQUIRED
                                             //- span.conSec__successText VALID
                                         .conSec__input
-                                            input.conSec__radioInput(class="form-control" type="radio" name="input-type" required)
+                                            input.conSec__radioInput(class="form-control" type="radio" name="input-type" value="Proposal" required)
                                             label(for="type-proposal")
                                                 span.conSec__choiceText Proposal
-                                            input.conSec__radioInput(class="form-control" type="radio" name="input-type" required data-pristine-required-message="What type of discussion you would like to discuss?")
+                                            input.conSec__radioInput(class="form-control" type="radio" name="input-type" value="Consulation" required data-pristine-required-message="What type of discussion you would like to discuss?")
                                             label(for="type-consultation")
                                                 span.conSec__choiceText Consulation
                                             p.conSec__errorText
@@ -317,15 +293,18 @@ html(lang="en")
                                             span.conSec__requiredText REQUIRED
                                             //- span.conSec__successText VALID
                                         .conSec__input
-                                            textarea.conSec__textArea(class="form-control" name="input-message" required minlength="20" maxlength="100" data-pristine-required-message="Include a short description of your query.")
+                                            textarea.conSec__textArea(class="form-control" name="input-message" required minlength="20" maxlength="100" data-pristine-required-message="Write a description that is at least 20 words long.")
                                             p.conSec__errorText
                                 tr.conSec__tableTr
                                     td.conSec__tableTd(colspan="2")
                                         .conSec__input
                                             input.conSec__submitInput(type="submit" value="SEND MESSAGE" )
+            section.popSec#popup
+                .popSec__inner
+                    .popSec__text Successfully sent
 
-
-            script(src="./_assets/lib/validate/pristine.js")
-            script(src="./_assets/js/main.js")
+            script(src=`https://smtpjs.com/v3/smtp.js`)
+            script(src=`${relativePath}/_assets/lib/validate/pristine.js`)
+            script(src=`${relativePath}/_assets/js/main.js`)
         footer
 
