@@ -12,33 +12,48 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous")
         link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+        link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
         link(rel="stylesheet" href=`${relativePath}/_assets/css/main.css`)
     body
         main
             section.kvSec
                 .kvSec__inner
-                    figure.kvSec__figureBg.js-panoObj
-                        img.kvSec__figureBgThumb(src=`${relativePath}/_assets/img/kv/kv.png` alt="kv")
                     figure.kvSec__figureArea
                         img.kvSec__figureThumb(src=`${relativePath}/_assets/img/common/logo.svg` alt="logo")
+                    //- .kvSec__gallery.js-panoObj
+                    .kvSec__gallery
+                        .swiper-wrapper
+                            .swiper-slide.u-flash
+                                figure.kvSec__figureBg(style="background-image: url('" + `${relativePath}` + "/_assets/img/kv/kv-01.png')")
+                            .swiper-slide.u-zoom
+                                figure.kvSec__figureBg(style="background-image: url('" + `${relativePath}` + "/_assets/img/kv/kv-02.png')")
+                            .swiper-slide.u-zoom
+                                figure.kvSec__figureBg(style="background-image: url('" + `${relativePath}` + "/_assets/img/kv/kv-03.jpg')")
+                            
+
             header.headerSec
             section.introSec
                 .introSec__inner(data-aos="intro-anim")
                     .introSec__innerRightCut
                     .introSec__innerLeftCut
                     .introSec__textArea
-                        h1.introSec__headTitle(data-aos="fade" data-aos-delay="1000") Mark Angeo Calderon
+                        h1.introSec__headTitle(data-aos="wipe-up" data-aos-delay="1000") Mark Angeo Calderon
                         p.introSec__subTitle(data-aos="fade" data-aos-delay="1000") A Web Developer
                     .introSec__galArea
-                        figure.introSec__figureArea(class="u-figure03" data-aos="fade" data-aos-delay="1000")
-                            img.introSec__figureThumb(src=`${relativePath}/_assets/img/thumb-03.png` alt="thumb")
+                        figure.introSec__figureArea(class="u-figure03" data-aos-delay="1000")
+                            img.introSec__figureThumb(src=`${relativePath}/_assets/img/thumb-04.png` alt="thumb")
+                            .introSec__figureThumbCover
+                                img.introSec__figureThumbColor( src=`${relativePath}/_assets/img/thumb-04-color.png` alt="thumb")
                         figure.introSec__figureArea(class="u-figure01" data-aos="fade" data-aos-delay="1000")
                             img.introSec__figureThumb(src=`${relativePath}/_assets/img/thumb-01.png` alt="thumb")
-                        figure.introSec__figureArea(class="u-figure02" data-aos="fade" data-aos-delay="1000")
+                        figure.introSec__figureArea(class="u-figure02" data-aos-delay="1000")
                             img.introSec__figureThumb(src=`${relativePath}/_assets/img/thumb-02.png` alt="thumb")
+                            .introSec__figureThumbCover
+                                img.introSec__figureThumbColor(src=`${relativePath}/_assets/img/thumb-02-color.png` alt="thumb")
             section.hisSec
                 .hisSec__inner
-                    p.hisSec__startText(data-aos="zoom-out") CAREER PATHWAY
+                    .hisSec__title
+                        p.hisSec__startText(data-aos="wipe-right-black") CAREER PATHWAY
                     .hisSec__tree
                         |
                         |
@@ -73,9 +88,6 @@ html(lang="en")
                                             | 2019
                         |
                         |
-                        //- .hisSec__treeMid
-                        |
-                        |
                         .hisSec__treeRight
                             |
                             |
@@ -104,8 +116,9 @@ html(lang="en")
                                         p.hisSec__treeItemYrText
                                             | 2021
                     // / hisSec__tree
-                    p.hisSec__endText(data-aos="zoom-out")
-                        | SOFT SKILLS
+                    .hisSec__title
+                        p.hisSec__endText(data-aos="wipe-right-black")
+                            | SOFT SKILLS
                     ul.hisSec__goalList
                         li.hisSec__goalItem(class="u-right")
                             .hisSec__goalItemTextArea
@@ -131,8 +144,8 @@ html(lang="en")
             |
             |
             section.proSec
-                .proSec__inner(data-aos="fade-up")
-                    h2.titleBlock PROJECTS
+                .proSec__inner
+                    h2.titleBlock(data-aos="wipe-right-black") PROJECTS
                     ul.proSec__list(id="project-list")
                         - var i=1
                         each item, index in projectList
@@ -229,21 +242,22 @@ html(lang="en")
             section.conSec
                 .conSec__bg.js-panoObj
                 .conSec__inner
-                    h2.titleBlock.u-aCenter CONTACT US
+                    .conSec__title
+                        h2.titleBlock.u-aCenter(data-aos="wipe-right-black") CONTACT US
                     ul.conSec__listLink
-                        li.conSec__listLinkItem
+                        li.conSec__listLinkItem(data-aos="zoom-out")
                             a.conSec__listLinkAnchor(href=`${relativePath}/_assets/docs/resume.docx` target="_blank" rel="noopener noreferrer")
                                 span.material-icons contact_page
-                        li.conSec__listLinkItem
+                        li.conSec__listLinkItem(data-aos="zoom-out")
                             a.conSec__listLinkAnchor(href="https://www.linkedin.com/in/markcalderon/" target="_blank" rel="noopener noreferrer")
                                 span.conSec__faIcon(class="fab fa-linkedin-in")
-                        li.conSec__listLinkItem
+                        li.conSec__listLinkItem(data-aos="zoom-out")
                             a.conSec__listLinkAnchor(href="https://twitter.com/markzev0" target="_blank" rel="noopener noreferrer")
                                 span.conSec__faIcon(class="fab fa-twitter")
-                        li.conSec__listLinkItem
+                        li.conSec__listLinkItem(data-aos="zoom-out")
                             a.conSec__listLinkAnchor(href="https://github.com/MarkCalderon" target="_blank" rel="noopener noreferrer")
                                 span.conSec__faIcon(class="fab fa-github")
-                    form.conSec__form(id="form" novalidate method="post")
+                    form.conSec__form(id="form" novalidate method="post" data-aos="slide-up")
                         table.conSec__table
                             tbody.conSec__tableTBody
                                 tr.conSec__tableTr
@@ -305,6 +319,7 @@ html(lang="en")
 
             script(src=`https://smtpjs.com/v3/smtp.js`)
             script(src=`${relativePath}/_assets/lib/validate/pristine.js`)
+            script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
             script(src=`${relativePath}/_assets/js/main.js`)
         footer
 

@@ -18,13 +18,17 @@
         background: center / cover no-repeat url('../img/con/bg.jpg');
     }
 
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+
     &__inner {
         position: relative;
         z-index: 2;
         margin: auto;
         max-width: 1230px;
         padding: 0 15px;
-
     }
 
     &__listLink {

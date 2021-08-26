@@ -4,6 +4,7 @@ import { accordion } from './modules/accordion'
 import { contact } from './modules/contact'
 import { more } from './modules/more'
 import { aos } from './modules/aos'
+import { swiper } from './modules/_swiper'
 
 document.addEventListener('DOMContentLoaded', () => {
     polyfill()
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     accordion()
     more()
     aos()
+    swiper()
 })
