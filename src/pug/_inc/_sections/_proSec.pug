@@ -1,0 +1,20 @@
+include ../_data.pug
+
+section.proSec
+    .proSec__inner
+        h2.titleBlock(data-aos="wipe-right-black") PROJECTS
+        ul.proSec__list(id="project-list")
+            - var i=1
+            each item, index in projectList
+                li.proSec__item(data-aos="fade" data-aos-delay=`${i + '00'}`)
+                    a.proSec__itemAnchor(href=`${item.link}` target="_blank")
+                        figure.proSec__itemImageArea
+                            .proSec__itemImageThumb(style="background-image: url('" + `${relativePath}` + "/_assets/img/projects/" + `${item.image}` + "')")
+                        .proSec__itemTextArea
+                            p.proSec__itemTitleText
+                                span.proSec__itemTitleText=item.title
+                                span.proSec__itemLabel(class=item.labelClass) #{item.label}
+                            p.proSec__itemParaText #{item.desc}
+                - i++
+            //- .proSec__more
+                    a.proSec__moreAnchor(data-more="project-list") SHOW MORE

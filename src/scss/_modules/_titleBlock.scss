@@ -1,0 +1,60 @@
+// titleBlock
+.titleBlock {
+    position: relative;
+    padding: 0 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: $white;
+    transition: .5s ease;
+    box-sizing: border-box;
+    
+    @include u-mqMax {
+        padding: 10px 30px;
+        width: 100%;
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0;
+        height: 100%;
+        background-color: $black;
+        transition: .5s ease;
+    }
+
+    &.aos-animate {
+        &:before {
+            width: 100%;
+        }
+    }
+
+    &.u-logo {
+        padding: 0;
+        margin: auto;
+        display: inline-block;
+        width: auto;
+        max-width: 100px;
+        font-size: 2rem;
+        border: 0;
+        transition: 1s ease;
+        cursor: pointer;
+        box-shadow: none;
+
+        &:hover {
+            opacity: 0.3;
+        }
+
+        span {
+            pointer-events: none;
+        }
+    }
+}

@@ -23,7 +23,7 @@ export const swiper = () => {
 
         on: {
             init: function (e) {
-                console.log('onstart : ' + e.activeIndex);
+                // console.log('onstart : ' + e.activeIndex);
                 slides[e.activeIndex].classList.add('u-animate')
             },
 
@@ -32,12 +32,12 @@ export const swiper = () => {
             },
 
             slideChangeTransitionStart: function (e) {
-                console.log('new : ' + e.activeIndex);
+                // console.log('new : ' + e.activeIndex);
                 slides[e.activeIndex].classList.add('u-animate');
             },
 
             slideChangeTransitionEnd: function (e) {
-                console.log('prev : ' + prevIndex);
+                // console.log('prev : ' + prevIndex);
                 slides[prevIndex].classList.remove('u-animate');
             },
         },

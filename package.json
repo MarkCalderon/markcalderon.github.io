@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean:post-pug": "rimraf build/_inc",
     "copy:img": "cpx \"src/img/**/*\" build/_assets/img/",
     "copy:lib": "cpx \"src/lib/**/*\" build/_assets/lib/",
     "copy:docs": "cpx \"src/docs/**/*\" build/_assets/docs/",
@@ -14,7 +15,7 @@
     "build:js": "webpack --config config/webpack.config.js",
     "start:server": "browser-sync start --server \"build\" --files \"build\"",
     "watch:js": "chokidar \"src/js/**/*.js\" -c \"npm run build:js\"",
-    "watch:pug": "chokidar \"src/pug/**/*\" -c \"npm run build:pug\"",
+    "watch:pug": "chokidar \"src/pug/**/*\" -c \"run-s build:pug clean:post-pug\"",
     "watch:scss": "chokidar \"src/scss/**/*.scss\" -c \"npm run build:scss\"",
     "watch:static": "run-p watch:img watch:lib watch:pug watch:js watch:scss",
     "serve": "run-p start:server watch:static"
@@ -30,6 +31,7 @@
     "cpx": "^1.5.0",
     "npm-run-all": "^4.1.5",
     "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^3.0.2",
     "sass": "^1.35.2",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2"

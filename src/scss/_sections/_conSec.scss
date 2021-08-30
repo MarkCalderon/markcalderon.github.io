@@ -1,12 +1,19 @@
 .conSec {
+    $this: &;
     margin-top: 64px;
     padding-bottom: 159px;
-    $this: &;
     position: relative;
     overflow: hidden;
+    @include u-mqMax {
+        margin-top: 15px;
+        padding-bottom: 50px;
+    }
 
     &__formLegendText {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        @include u-mqMax {
+            font-size: 1rem;
+        }
     }
 
     &__bg {
@@ -39,17 +46,24 @@
 
     &__listLinkItem {
         margin: 0 5px;
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
         border: 1px solid $black;
         display: flex;
         justify-content: center;
         align-items: center;
+        @include u-mqMax {
+            width: 45px;
+            height: 45px;
+        }
     }
 
     &__faIcon {
-        font-size: 2em;
+        font-size: 3em;
+        @include u-mqMax {
+            font-size: 1.3rem;
+        }
     }
 
     &__listLinkAnchor {
@@ -72,10 +86,14 @@
         border: 1px solid $black;
         border-radius: 10px;
         background-color: $white;
+        @include u-mqMax {
+            padding: 10px 15px 30px;
+        }
     }
 
     &__tableTd {
         padding-top: 20px;
+        @include u-mqMax {}
 
         &.has-danger {
             #{$this}__requiredText {
@@ -92,13 +110,19 @@
     }
 
     &__labelText {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 300;
+        @include u-mqMax {
+            font-size: 1rem;
+        }
     }
 
     &__choiceText {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 300;
+        @include u-mqMax {
+            font-size: 1rem;
+        }
     }
 
     &__requiredText {
@@ -114,11 +138,14 @@
     &__successText {
         margin-left: 10px;
         padding: 5px 10px;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         font-weight: bold;
         color: $white;
         background-color: rgb(91, 196, 91);
         display: none;
+        @include u-mqMax {
+            font-size: 1rem;
+        }
     }
 
     &__input {
@@ -129,18 +156,27 @@
         padding: 0 10px;
         width: 100%;
         height: 40px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         box-sizing: border-box;
+        @include u-mqMax {
+            font-size: 1rem;
+        }
 
         &[type="email"] {
             max-width: 320px;
+            @include u-mqMax {
+                max-width: 100%;
+            }
         }
     }
 
     &__errorText {
         margin-top: 10px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: $red;
+        @include u-mqMax {
+            font-size: 1rem;
+        }
     }
 
     &__radioInput {
@@ -171,9 +207,9 @@
         margin: auto;
         padding: 0 10px;
         width: 100%;
-        max-width: 200px;
-        height: 40px;
-        font-size: 1rem;
+        max-width: 300px;
+        height: 60px;
+        font-size: 1.2rem;
         font-weight: 300;
         box-sizing: border-box;
         border: 0;
@@ -184,6 +220,9 @@
         transition: .7s ease;
         cursor: pointer;
         font-weight: 500;
+        @include u-mqMax {
+            font-size: 1rem;
+        }
 
         &:hover {
             background-color: rgba($black, .5);

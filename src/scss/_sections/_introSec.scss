@@ -10,6 +10,10 @@
         justify-content: center;
         flex-direction: column;
         overflow: hidden;
+        @include u-mqMax {
+            padding: 50px 0;
+            height: auto;
+        }
     }
 
     &__innerRightCut {
@@ -44,6 +48,9 @@
         font-family: $Oswald;
         text-transform: uppercase;
         letter-spacing: -0.06em;
+        @include u-mqMax {
+            font-size: 1.5rem;
+        }
 
         &:before {
             content: '';
@@ -62,6 +69,9 @@
     &__subTitle {
         font-size: 3rem;
         font-weight: 300;
+        @include u-mqMax {
+            font-size: 1.5rem;
+        }
     }
 
     &__galArea {
@@ -76,20 +86,32 @@
 
         &:nth-child(2) {
             margin: 0 40px;
+            @include u-mqMax {
+                margin: 0 5%;
+            }
         }
 
         &.u-figure01 {
             max-width: 300px;
+            @include u-mqMax {
+                max-width: 100px;
+            }
         }
 
         &.u-figure02 {
             opacity: 0.2;
             max-width: 330px;
+            @include u-mqMax {
+                max-width: 100px;
+            }
         }
 
         &.u-figure03 {
             opacity: 0.2;
             max-width: 300px;
+            @include u-mqMax {
+                max-width: 80px;
+            }
         }
     }
 

@@ -1,0 +1,47 @@
+.headerSec {
+    width: 100%;
+    background-color: rgba($black, .8);
+    
+    &__inner {
+        padding: 0 40px;
+        height: 56px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 1px 0 5px 4px rgba($black, 0.3);
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: blue;
+    }
+
+    &__navList {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__navItem {
+        margin-left: 60px;
+    }
+
+    &__navItemAnchor {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $white;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .u-cYellow {
+        color: yellow;
+    }
+
+    .u-cRed {
+        color: red;
+    }
+}

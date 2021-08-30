@@ -1,0 +1,158 @@
+.softSec {
+  $this: &;
+
+  &__inner {
+    margin: auto;
+    padding: 0 15px;
+    max-width: 1230px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__titleText {
+    margin-top: 250px;
+    position: relative;
+    padding: 0 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: $white;
+    transition: .5s ease;
+    @include u-mqMax {
+      margin-top: 15px;
+    }
+
+    @include u-mqMax {
+      padding: 10px 30px;
+      font-size: 1.5rem;
+      display: block;
+      width: 100%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0;
+      height: 100%;
+      background-color: $black;
+      transition: .5s ease;
+    }
+
+    &.aos-animate {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__goalList {
+    margin: 80px auto 0;
+    max-width: 70%;
+
+    @include u-mqMax {
+      margin-top: 15px;
+      max-width: 100%;
+    }
+  }
+
+  &__goalItem {
+    max-width: 550px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @include u-mqMax {
+      margin: auto;
+      font-size: 1rem;
+    }
+
+    &:not(:first-child) {
+      margin-top: -100px;
+
+      @include u-mqMax {
+        margin-top: 15px;
+      }
+    }
+
+    &.u-right {
+      margin-left: auto;
+    }
+
+    &.u-left {
+      #{$this}__goalItemTitleText {
+        &:before {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+
+  &__goalItemTitleText {
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+    transition: 2s 1s ease;
+
+    @include u-mqMax {
+      font-size: 1.5rem;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      transition: 2s 1s ease;
+    }
+  }
+
+  &__goalItemFigureArea {
+
+    &.u-goalItem01 {
+      margin: 20px auto 0 auto;
+      max-width: 150px;
+
+      @include u-mqMax {
+        margin: 0 auto;
+        max-width: 100px;
+      }
+    }
+
+    &.u-goalItem02 {
+      margin: auto;
+      max-width: 250px;
+
+      @include u-mqMax {
+        margin: 0 auto;
+        max-width: 150px;
+      }
+    }
+
+    &.u-goalItem03 {
+      margin: 20px auto 15px;
+      max-width: 140px;
+
+      @include u-mqMax {
+        margin: 15px auto 0;
+        max-width: 100px;
+      }
+    }
+  }
+}

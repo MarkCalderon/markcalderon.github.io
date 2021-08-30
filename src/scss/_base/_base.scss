@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+ul {
+    list-style: none;
+}
+
+input, textarea {
+    font-family: $Roboto;
+}
+
+// light 300
+// regular 400
+// black 900
+
+body {
+    font-family: $Roboto;
+    font-size: 62.5%;
+    line-height: 1.5;
+}

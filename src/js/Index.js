@@ -5,6 +5,7 @@ import { contact } from './modules/contact'
 import { more } from './modules/more'
 import { aos } from './modules/aos'
 import { swiper } from './modules/_swiper'
+import { observe } from './modules/_observe'
 
 document.addEventListener('DOMContentLoaded', () => {
     polyfill()
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     more()
     aos()
     swiper()
+    // observe()
 })

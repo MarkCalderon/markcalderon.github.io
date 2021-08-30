@@ -1,0 +1,74 @@
+section.conSec
+    .conSec__bg.js-panoObj
+    .conSec__inner
+        .conSec__title
+            h2.titleBlock.u-aCenter(data-aos="wipe-right-black") LET'S TALK
+        ul.conSec__listLink
+            li.conSec__listLinkItem(data-aos="zoom-out")
+                a.conSec__listLinkAnchor(href=`${relativePath}/_assets/docs/resume.docx` target="_blank" rel="noopener noreferrer")
+                    span.material-icons contact_page
+            li.conSec__listLinkItem(data-aos="zoom-out")
+                a.conSec__listLinkAnchor(href="https://www.linkedin.com/in/markcalderon/" target="_blank" rel="noopener noreferrer")
+                    span.conSec__faIcon(class="fab fa-linkedin-in")
+            li.conSec__listLinkItem(data-aos="zoom-out")
+                a.conSec__listLinkAnchor(href="https://twitter.com/markzev0" target="_blank" rel="noopener noreferrer")
+                    span.conSec__faIcon(class="fab fa-twitter")
+            li.conSec__listLinkItem(data-aos="zoom-out")
+                a.conSec__listLinkAnchor(href="https://github.com/MarkCalderon" target="_blank" rel="noopener noreferrer")
+                    span.conSec__faIcon(class="fab fa-github")
+        form.conSec__form(id="form" novalidate method="post" data-aos="fade-up")
+            table.conSec__table
+                tbody.conSec__tableTBody
+                    tr.conSec__tableTr
+                        td.conSec__tableTd(colspan="2")
+                            legend.conSec__formLegend
+                                p.conSec__formLegendText All fields are required to be filled in.
+                    tr.conSec__tableTr
+                        td.conSec__tableTd(colspan="2")
+                            label.conSec__label(for="input-email")
+                                span.conSec__labelText
+                                    | Email Address:
+                                span.conSec__requiredText REQUIRED
+                                //- span.conSec__successText VALID
+                            .conSec__input
+                                input.conSec__textInput(class="form-control" type="email" name="input-email" required placeholder="email@mail.com" data-pristine-required-message="Please provide an email for us to reach you.")
+                                p.conSec__errorText
+                    tr.conSec__tableTr
+                        td.conSec__tableTd(colspan="2")
+                            label.conSec__label(for="input-name")
+                                span.conSec__labelText
+                                    | Name:
+                                span.conSec__requiredText REQUIRED
+                                //- span.conSec__successText VALID
+                            .conSec__input
+                                input.conSec__textInput(class="form-control" type="text" name="input-name" placeholder="John Doe (Nickname)" required data-pristine-required-message="How should we address you?")
+                                p.conSec__errorText
+                    tr.conSec__tableTr
+                        td.conSec__tableTd
+                            label.conSec__label(for="input-type")
+                                span.conSec__labelText
+                                    | Type:
+                                span.conSec__requiredText REQUIRED
+                                //- span.conSec__successText VALID
+                            .conSec__input
+                                input.conSec__radioInput(class="form-control" type="radio" name="input-type" id="input-proposal" value="Proposal" required)
+                                label(for="input-proposal")
+                                    span.conSec__choiceText Proposal
+                                input.conSec__radioInput(class="form-control" type="radio" name="input-type" id="input-consulation" value="Consulation" required data-pristine-required-message="What type of discussion you would like to discuss?")
+                                label(for="input-consulation")
+                                    span.conSec__choiceText Consulation
+                                p.conSec__errorText
+                    tr.conSec__tableTr
+                        td.conSec__tableTd(colspan="2")
+                            label.conSec__label(for="input-message")
+                                span.conSec__labelText
+                                    | Your message:
+                                span.conSec__requiredText REQUIRED
+                                //- span.conSec__successText VALID
+                            .conSec__input
+                                textarea.conSec__textArea(class="form-control" name="input-message" required minlength="20" maxlength="100" data-pristine-required-message="Write a description that is at least 20 words long.")
+                                p.conSec__errorText
+                    tr.conSec__tableTr
+                        td.conSec__tableTd(colspan="2")
+                            .conSec__input
+                                input.conSec__submitInput(type="submit" value="SEND MESSAGE" )
