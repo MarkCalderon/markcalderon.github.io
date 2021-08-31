@@ -24,7 +24,7 @@ export const swiper = () => {
         on: {
             init: function (e) {
                 // console.log('onstart : ' + e.activeIndex);
-                slides[e.activeIndex].classList.add('u-animate')
+                slides[swiper.activeIndex].classList.add('u-animate')
             },
 
             slideChange: function(e) {
@@ -33,7 +33,7 @@ export const swiper = () => {
 
             slideChangeTransitionStart: function (e) {
                 // console.log('new : ' + e.activeIndex);
-                slides[e.activeIndex].classList.add('u-animate');
+                slides[swiper.activeIndex].classList.add('u-animate');
             },
 
             slideChangeTransitionEnd: function (e) {

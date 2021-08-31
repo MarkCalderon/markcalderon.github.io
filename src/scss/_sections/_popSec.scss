@@ -1,4 +1,5 @@
 .popSec {
+    padding: 20px;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -12,19 +13,27 @@
     visibility: hidden;
     pointer-events: none;
     transition: .5s ease;
-
+    box-sizing: border-box;
+    
     &.is-submit {
         opacity: 1;
         visibility: visible;
         pointer-events: all;
     }
-
+    
     &__inner {
         background-color: $white;
         padding: 15px 40px;
+        border: 1px solid $black;
+        box-shadow: 1px 1px 20px 5px rgba(lightgray, .4);
+        box-sizing: border-box;
+        text-align: center;
     }
 
     &__text {
         font: bold 1.5rem $Roboto;
+        @include u-mqMax {
+            font-size: 1rem;
+        }
     }
 }

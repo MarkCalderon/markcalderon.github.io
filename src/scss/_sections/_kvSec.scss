@@ -17,6 +17,7 @@
     &__figureArea {
         margin: auto;
         max-width: 200px;
+        width: 100%;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -45,6 +46,10 @@
 
     &__gallery {
         height: 100vh !important;
+
+        .swiper-slide {
+            overflow: hidden;
+        }
     }
 
 }

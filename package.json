@@ -13,13 +13,18 @@
     "build:scss": "sass --style=compressed --color \"src/scss/main.scss\" \"build/_assets/css/main.css\" ",
     "build:pug": "pug --pretty \"src/pug\" --out \"build/\" ",
     "build:js": "webpack --config config/webpack.config.js",
-    "start:server": "browser-sync start --server \"build\" --files \"build\"",
+    "start:server": "browser-sync --no-snippet start --server \"build\" --files \"build\"",
     "watch:js": "chokidar \"src/js/**/*.js\" -c \"npm run build:js\"",
     "watch:pug": "chokidar \"src/pug/**/*\" -c \"run-s build:pug clean:post-pug\"",
     "watch:scss": "chokidar \"src/scss/**/*.scss\" -c \"npm run build:scss\"",
     "watch:static": "run-p watch:img watch:lib watch:pug watch:js watch:scss",
     "serve": "run-p start:server watch:static"
   },
+  "browserslist": [
+    "<2%",
+    "ie 11",
+    "not dead"
+  ],
   "author": "Mark Calderon",
   "license": "ISC",
   "devDependencies": {

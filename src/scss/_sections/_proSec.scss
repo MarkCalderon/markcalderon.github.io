@@ -1,8 +1,7 @@
 // procSec
 .proSec {
   $this: '.proSec';
-  margin-top: 200px;
-
+  margin-top: 100px;
   @include u-mqMax {
     margin-top: 15px;
   }
@@ -48,7 +47,9 @@
     }
 
     &:not(:first-child) {
-      margin-top: 15px;
+      @include u-mqMax {
+        margin-top: 15px;
+      }
     }
 
     &:nth-child(n+7) {
