@@ -19,7 +19,7 @@
     "watch:scss": "chokidar \"src/scss/**/*.scss\" -c \"npm run build:scss\"",
     "watch:static": "run-p watch:img watch:lib watch:pug watch:js watch:scss",
     "serve": "run-p start:server watch:static",
-    "build": "run-s copy:img copy:lib copy:docs build:scss build:pug build:js"
+    "build": "run-s copy:img copy:lib copy:docs build:scss build:pug clean:post-pug build:js"
   },
   "browserslist": [
     "<2%",
