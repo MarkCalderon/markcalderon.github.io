@@ -13,7 +13,7 @@
     "build:scss": "sass --style=compressed --color \"src/scss/main.scss\" \"./_assets/css/main.css\" ",
     "build:pug": "pug --pretty \"src/pug\" --out \"./\" ",
     "build:js": "webpack --config config/webpack.config.js",
-    "start:server": "browser-sync --no-snippet start --server \"build\" --files \"build\"",
+    "start:server": "browser-sync --no-snippet start --server \"./\" --files \"./\"",
     "watch:js": "chokidar \"src/js/**/*.js\" -c \"npm run build:js\"",
     "watch:pug": "chokidar \"src/pug/**/*\" -c \"run-s build:pug clean:post-pug\"",
     "watch:scss": "chokidar \"src/scss/**/*.scss\" -c \"npm run build:scss\"",

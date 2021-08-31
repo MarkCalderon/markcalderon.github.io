@@ -5,7 +5,8 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     output: {
-        path: path.resolve(__dirname, '../build/_assets/js/'),
+        // path: path.resolve(__dirname, '../build/_assets/js/'),
+        path: path.resolve(__dirname, '../_assets/js/'),
         filename: 'main.js',
     },
     module: {
