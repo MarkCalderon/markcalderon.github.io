@@ -36,10 +36,10 @@ export const contact = () => {
                     SecureToken: "6fb550bd-7231-4867-9fc0-0e61d85f4ccc",
                     To : email,
                     From : 'markcev0@gmail.com',
-                    Subject : `[INQUIRY RECEIPT] from ${name} `,
+                    Subject : `[INQUIRY RECEIPT] from Angeo`,
                     Body :  `
                                 Your email is successfully received.<br>
-                                Expect a response within 1 week.
+                                You can expect a response within 1 week.
                             `
                 }).then(()=> {
                     popup.classList.add('is-submit')
