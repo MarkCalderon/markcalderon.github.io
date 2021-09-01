@@ -40,6 +40,12 @@ export const swiper = () => {
                 // console.log('prev : ' + prevIndex);
                 slides[prevIndex].classList.remove('u-animate');
             },
+
+            resize: function(e) {
+                slides.forEach(slide => {
+                    slide.classList.remove('u-animate');
+                });
+            },
         },
     });
 

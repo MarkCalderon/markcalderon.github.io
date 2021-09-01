@@ -60,6 +60,7 @@
 .u-zoom {
     &.u-animate {
         .kvSec__figureBg {
+            transition: 20s linear;
             transform: scale(1.5);
         }
     }

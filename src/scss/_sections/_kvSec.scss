@@ -1,55 +1,50 @@
 .kvSec {
-    $this: &;
+  $this: &;
+  overflow: hidden;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__titleText {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  &__figureArea {
+    margin: auto;
+    max-width: 200px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    @include u-mqMax {
+      max-width: 150px;
+    }
+  }
+
+  &__figureBg {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__figureBgThumb {
+    @include u-mqMax {
+      height: 100vh;
+      width: auto;
+    }
+  }
+
+  &__gallery {
     overflow: hidden;
-
-    &__inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    &__titleText {
-        font-size: 2rem;
-        font-weight: 900;
-        text-align: center;
-    }
-
-    &__figureArea {
-        margin: auto;
-        max-width: 200px;
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        right: 0;
-        z-index: 2;
-        @include u-mqMax {
-            max-width: 150px;
-        }
-    }
-
-    &__figureBg {
-        transition: 20s linear;
-        height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    &__figureBgThumb {
-        @include u-mqMax {
-            height: 100vh;
-            width: auto;
-        }
-    }
-
-    &__gallery {
-        height: 100vh !important;
-
-        .swiper-slide {
-            overflow: hidden;
-        }
-    }
-
+  }
 }
