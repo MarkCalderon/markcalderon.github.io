@@ -7,10 +7,13 @@ head
     meta(name="description" content=`${meta_description}`)
     // Open Graph / Facebook
     meta(property="og:type" content="website")
-    meta(property="og:url" content=`${meta_url}`)
+    meta(property="og:url" content=`${meta_url}/`)
     meta(property="og:title" content=`${meta_title}`)
     meta(property="og:description" content=`${meta_description}`)
-    meta(property="og:image" content=`${meta_url}`)
+    meta(property="og:image" content=`${meta_url}/_assets/img/common/ogp.png`)
+
+    link(rel="shortcut icon" href=`${relativePath}/_assets/img/common/favicon.ico` type="image/x-icon")
+    link(rel="icon" href=`${relativePath}/_assets/img/common/favicon.ico` type="image/x-icon")
 
     // Scripts
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
