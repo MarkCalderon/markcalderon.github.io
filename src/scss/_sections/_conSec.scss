@@ -196,13 +196,12 @@
     }
 
     &__submitInput {
+        position: relative;
         margin: auto;
         padding: 0 10px;
         width: 100%;
         max-width: 300px;
         height: 60px;
-        font-size: 1.2rem;
-        font-weight: 300;
         box-sizing: border-box;
         border: 0;
         outline: 0;
@@ -211,13 +210,46 @@
         border: 1px solid $black;
         transition: .7s ease;
         cursor: pointer;
-        font-weight: 500;
+        overflow: hidden;
         @include u-mqMax {
-            font-size: 1rem;
+            background-color: $black;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: $black;
+            transition: .7s ease;
+            @include u-mqMax {
+                width: 100%;
+            }
         }
 
         &:hover {
-            background-color: rgba($black, .5);
+            #{$this}__submitInputText {
+                color: $white;
+            }
+            &:before {
+                background-color: $black;
+                width: 100%;
+
+            }
+        }
+    }
+
+    &__submitInputText {
+        position: relative;
+        z-index: 2;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $black;
+        transition: .5s ease;
+        @include u-mqMax {
+            font-size: 1rem;
             color: $white;
         }
     }

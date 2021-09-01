@@ -22,7 +22,7 @@ section.conSec
                     tr.conSec__tableTr
                         td.conSec__tableTd(colspan="2")
                             legend.conSec__formLegend
-                                p.conSec__formLegendText Type in your details so we can talk about it.
+                                p.conSec__formLegendText Fill in your details so we can talk about it.
                     tr.conSec__tableTr
                         td.conSec__tableTd(colspan="2")
                             label.conSec__label(for="input-email")
@@ -54,7 +54,7 @@ section.conSec
                                 input.conSec__radioInput(class="form-control" type="radio" name="input-type" id="input-proposal" value="Proposal" required)
                                 label(for="input-proposal")
                                     span.conSec__choiceText Proposal
-                                input.conSec__radioInput(class="form-control" type="radio" name="input-type" id="input-consulation" value="Consulation" required data-pristine-required-message="What type of discussion you would like to discuss?")
+                                input.conSec__radioInput(class="form-control" type="radio" name="input-type" id="input-consulation" value="Consulation" required data-pristine-required-message="Pick what type of discussion you would like to discuss?")
                                 label(for="input-consulation")
                                     span.conSec__choiceText Consulation
                                 p.conSec__errorText
@@ -71,4 +71,5 @@ section.conSec
                     tr.conSec__tableTr
                         td.conSec__tableTd(colspan="2")
                             .conSec__input
-                                input.conSec__submitInput(type="submit" value="SEND MESSAGE" )
+                                button.conSec__submitInput
+                                    p.conSec__submitInputText SEND MESSAGE
