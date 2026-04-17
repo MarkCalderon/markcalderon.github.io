@@ -1,0 +1,53 @@
+---
+description: Standard baseline coding and collaboration rules
+alwaysApply: true
+---
+
+# Standard Project Rules
+
+## Core Principles
+- Favor clarity over cleverness.
+- Keep changes minimal and focused on the requested outcome.
+- Preserve existing behavior unless the task explicitly requires a change.
+- Optimize for readability, maintainability, and predictable outcomes.
+
+## Code Quality
+- Follow the existing project structure and naming patterns.
+- Write small, single-purpose functions and avoid deep nesting.
+- Prefer explicit error handling over silent failures.
+- Remove dead code and avoid introducing unused variables or imports.
+- Use `TypeScript` for new code in this project.
+- In TypeScript, do not use `any`, `as` casts, or type assertions; use precise types and type guards.
+
+## Testing And Validation
+- Validate functional changes with the most relevant local checks.
+- Add or update tests when behavior changes.
+- Do not skip failing checks; fix root causes when feasible.
+- Call out any unverified paths when full validation is not possible.
+
+## Documentation
+- Update docs or inline comments when behavior, interfaces, or setup changes.
+- Keep comments concise and explanatory; avoid obvious commentary.
+- Record assumptions and tradeoffs when they affect implementation choices.
+
+## Git And Collaboration
+- Keep commits scoped to a single concern.
+- Use clear commit messages that explain intent and impact.
+- Never commit secrets, credentials, or environment-specific sensitive data.
+- Do not rewrite shared history unless explicitly requested.
+
+## Security And Reliability
+- Validate external inputs at trust boundaries.
+- Use least-privilege defaults for configuration and permissions.
+- Avoid logging sensitive data.
+- Prefer safe defaults and explicit opt-ins for risky behavior.
+
+## Performance
+- Avoid premature optimization; focus first on correctness.
+- Measure before optimizing hotspots.
+- Keep network and I/O operations intentional and bounded.
+
+## Accessibility And UX (When Applicable)
+- Ensure keyboard accessibility and visible focus states.
+- Preserve semantic markup and readable contrast.
+- Provide clear loading, empty, and error states.
