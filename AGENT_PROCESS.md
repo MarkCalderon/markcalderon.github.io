@@ -44,6 +44,8 @@ Use this process for every task unless the user explicitly asks to skip a step.
 
 7. Verify thoroughly.
    - Run the most relevant tests/checks for changed areas.
+   - Always run a TypeScript/type/error check (`tsc` or project equivalent) before finalizing.
+   - Fix type and runtime errors found during verification when feasible in the current scope.
    - Resolve lint/type/test failures introduced by the changes.
    - If full verification is not possible, document what was not validated.
 

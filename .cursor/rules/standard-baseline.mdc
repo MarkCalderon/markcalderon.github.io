@@ -21,6 +21,8 @@ alwaysApply: true
 
 ## Testing And Validation
 - Validate functional changes with the most relevant local checks.
+- Always run a TypeScript/type/error check (`tsc` or project equivalent) for substantive code changes.
+- Fix newly introduced type and runtime errors when feasible before considering work complete.
 - Add or update tests when behavior changes.
 - Do not skip failing checks; fix root causes when feasible.
 - Call out any unverified paths when full validation is not possible.

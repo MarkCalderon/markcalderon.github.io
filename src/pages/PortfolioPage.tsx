@@ -6,22 +6,21 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
-function App() {
+function PortfolioPage() {
   return (
     <Card className="text-left">
       <CardHeader>
-        <CardTitle className="text-3xl tracking-tight">Home</CardTitle>
+        <CardTitle className="text-3xl tracking-tight">Portfolio</CardTitle>
         <CardDescription>
-          Welcome to the homepage. TanStack Router now handles this route at{' '}
-          <code>/</code>.
+          This is the portfolio page routed by TanStack Router at{' '}
+          <code>/portfolio</code>.
         </CardDescription>
       </CardHeader>
       <CardContent className="pt-0 text-sm text-muted-foreground">
-        Use the navigation buttons above to move between `home`, `blog`, and
-        `portfolio`.
+        Add featured projects, outcomes, and case studies here.
       </CardContent>
     </Card>
   )
 }
 
-export default App
+export default PortfolioPage
