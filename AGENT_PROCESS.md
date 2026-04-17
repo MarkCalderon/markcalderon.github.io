@@ -31,6 +31,7 @@ Use this process for every task unless the user explicitly asks to skip a step.
    - Use `TypeScript` for all new app code and prefer strict, explicit typing patterns.
    - Use `shadcn/ui` components as the default UI building blocks.
    - Style with `Tailwind CSS` and follow consistent spacing, typography, and state patterns.
+   - For font sizing, use Tailwind text size utilities (such as `text-xs`, `text-sm`, `text-base`, `text-lg`) rather than arbitrary custom font-size values.
    - Apply route patterns using `TanStack Router` conventions.
    - Handle server state with `TanStack Query` (query keys, loading/error states, invalidation).
    - Handle forms with `TanStack Form` (schema/validation, touched/error states, submit lifecycle).
@@ -45,6 +46,7 @@ Use this process for every task unless the user explicitly asks to skip a step.
 7. Verify thoroughly.
    - Run the most relevant tests/checks for changed areas.
    - Always run a TypeScript/type/error check (`tsc` or project equivalent) before finalizing.
+   - Run `webhint` (or project accessibility checker equivalent) to validate accessibility issues for relevant UI/frontend changes.
    - Fix type and runtime errors found during verification when feasible in the current scope.
    - Resolve lint/type/test failures introduced by the changes.
    - If full verification is not possible, document what was not validated.

@@ -1,26 +1,14 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import Intro from '@/components/Intro/Intro'
+import TechnicalProfile from '@/components/TechnicalProfile/TechnicalProfile'
+import WorkExperienceTree from '@/components/WorkExperienceTree/WorkExperienceTree'
 
 function App() {
   return (
-    <Card className="text-left">
-      <CardHeader>
-        <CardTitle className="text-3xl tracking-tight">Home</CardTitle>
-        <CardDescription>
-          Welcome to the homepage. TanStack Router now handles this route at{' '}
-          <code>/</code>.
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="pt-0 text-sm text-muted-foreground">
-        Use the navigation buttons above to move between `home`, `blog`, and
-        `portfolio`.
-      </CardContent>
-    </Card>
+    <div className="flex flex-col gap-6">
+      <Intro />
+      <TechnicalProfile />
+      <WorkExperienceTree />
+    </div>
   )
 }
 

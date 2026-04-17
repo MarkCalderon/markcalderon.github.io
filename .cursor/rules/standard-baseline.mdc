@@ -53,3 +53,4 @@ alwaysApply: true
 - Ensure keyboard accessibility and visible focus states.
 - Preserve semantic markup and readable contrast.
 - Provide clear loading, empty, and error states.
+- For typography in UI code, use Tailwind text size utilities (for example `text-xs`, `text-sm`, `text-base`, `text-lg`, `text-xl`) instead of arbitrary font-size values.
