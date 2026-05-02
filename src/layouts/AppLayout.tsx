@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
-import { Link, Outlet } from '@tanstack/react-router'
-import { Button } from '@/components/ui/button'
 import PageLoader from '@/components/PageLoader/PageLoader'
 import { Separator } from '@/components/ui/separator'
+import { Outlet } from '@tanstack/react-router'
+import { useEffect, useState } from 'react'
 
 function AppLayout() {
   const [isPageLoading, setIsPageLoading] = useState(true)
@@ -41,16 +40,16 @@ function AppLayout() {
         <header className="flex items-center justify-between">
           <h1 className="site-title-handwrite text-sm">Mark Calderon</h1>
           <nav className="flex items-center gap-2">
-            <Button asChild variant="ghost" size="sm">
+            {/* <Button asChild variant="ghost" size="sm">
               <Link to="/" activeProps={{ className: 'bg-muted' }}>
                 About
               </Link>
-            </Button>
-            <Button asChild variant="ghost" size="sm" disabled>
+            </Button> */}
+            {/* <Button asChild variant="ghost" size="sm" disabled>
               <Link to="/blog" activeProps={{ className: 'bg-muted' }}>
-                Blog
+                Story
               </Link>
-            </Button>
+            </Button> */}
           </nav>
         </header>
         <Separator />
