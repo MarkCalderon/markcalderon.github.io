@@ -9,6 +9,7 @@ import {
   toolsDesignShowcaseCards,
   type TechCard,
 } from '@/components/TechnicalProfile/techData'
+import portrait from '@/assets/portrait.webp'
 import { useAutoplay } from '@/hooks/useAutoplay'
 import { useFlight } from '@/hooks/useFlight'
 import { cn } from '@/lib/utils'
@@ -29,7 +30,7 @@ function place(x: number, y: number, z: number): CSSProperties {
 function constellationSpot(index: number) {
   const angle = index * 2.39996
   const radius = 160 + index * 22
-  return { x: 280 + Math.cos(angle) * radius, y: Math.sin(angle) * radius * 0.6 - 60, z: 260 - index * 46 }
+  return { x: 160 + Math.cos(angle) * radius, y: Math.sin(angle) * radius * 0.6 - 60, z: 260 - index * 46 }
 }
 
 /** Award chips float at different depths around the year so parallax separates them. */
@@ -97,6 +98,20 @@ function Timeline() {
 function Scenery({ scene }: { scene: Scene }) {
   switch (scene.kind) {
     case 'intro':
+      return (
+        // World offsets differ per breakpoint, so they live in CSS vars: right of the copy on
+        // desktop, lifted above it on phones. Feet fade so the crop edge never reads as a line.
+        <img
+          src={portrait}
+          alt=""
+          width={360}
+          height={450}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute h-[34rem] w-auto max-w-none [--portrait-x:0px] [--portrait-y:-130px] [mask-image:linear-gradient(to_bottom,black_72%,transparent)] md:[--portrait-x:140px] md:[--portrait-y:-30px]"
+          style={{ transform: 'translate3d(var(--portrait-x), var(--portrait-y), 0) translate(-50%, -50%)' }}
+        />
+      )
     case 'contact':
       return (
         <p className="text-[11rem] leading-none font-medium tracking-tight whitespace-nowrap text-foreground/[0.07]">
@@ -118,8 +133,9 @@ function Scenery({ scene }: { scene: Scene }) {
     case 'impact':
       return (
         <>
+          {/* Phones skip the numeral: it lands under the progress bar and the stat grid already says it. */}
           <p
-            className="world-outline absolute text-[22rem] leading-none font-medium tracking-tight tabular-nums"
+            className="world-outline absolute hidden text-[22rem] leading-none font-medium tracking-tight tabular-nums md:block"
             style={place(-380, -220, 0)}
           >
             {markets.length}
@@ -311,8 +327,11 @@ function SceneCopy({ scene, onViewProjects }: { scene: Scene; onViewProjects: ()
             Technical profile
           </h2>
           <TechList title="Languages & frameworks" items={technologyShowcaseCards} />
-          <TechList title="Tools & design" items={toolsDesignShowcaseCards} />
-          <div className="flex flex-wrap gap-1.5">
+          {/* Phones keep the scene short; the icon constellation above already shows every tool. */}
+          <div className="hidden md:block">
+            <TechList title="Tools & design" items={toolsDesignShowcaseCards} />
+          </div>
+          <div className="hidden flex-wrap gap-1.5 md:flex">
             {leadership.badges.map((badge) => (
               <Badge key={badge} variant="outline">
                 {badge}
@@ -388,7 +407,7 @@ function ScrollWorld() {
               id={scene.id}
               data-scene-copy
               aria-labelledby={`${scene.id}-title`}
-              className="absolute inset-x-4 bottom-[calc(2.5rem+env(safe-area-inset-bottom))] flex max-w-xl flex-col gap-5 opacity-0 sm:inset-x-6 md:bottom-16"
+              className="absolute inset-x-4 bottom-[calc(20dvh+env(safe-area-inset-bottom))] flex max-w-xl flex-col gap-5 opacity-0 sm:inset-x-6 md:bottom-16"
               style={index === 0 ? { opacity: 1 } : undefined}
             >
               <SceneCopy scene={scene} onViewProjects={() => goTo(firstIndexOf('work'))} />
@@ -414,17 +433,44 @@ function ScrollWorld() {
           ))}
         </nav>
 
-        <Button
-          ref={autoplayRef}
-          variant="outline"
-          size="sm"
-          aria-pressed={autoplay.isPlaying}
-          onClick={autoplay.toggle}
-          className="absolute top-4 right-4 bg-background/80 md:top-auto md:right-6 md:bottom-8"
-        >
-          {autoplay.isPlaying ? <Pause data-icon="inline-start" /> : <Play data-icon="inline-start" />}
-          {autoplay.isPlaying ? 'Pause' : 'Autoplay'}
-        </Button>
+        {/* Phones: progress bar and Autoplay share a top row. From md up the row dissolves
+            (display: contents) and Autoplay drops to the bottom-right corner. */}
+        <div className="absolute inset-x-0 top-0 flex items-start gap-3 px-4 pt-[calc(0.5rem+env(safe-area-inset-top))] md:contents">
+          <nav aria-label="Sections" className="flex min-w-0 flex-1 flex-col md:hidden">
+            <div className="flex">
+              {sceneGroups.map(({ group, label }) => (
+                <button
+                  key={group}
+                  type="button"
+                  data-rail-group={group}
+                  aria-label={label}
+                  onClick={() => goTo(firstIndexOf(group))}
+                  className="group flex h-11 flex-1 items-center px-0.5 outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="h-0.5 w-full rounded-full bg-foreground/15 transition-colors duration-200 ease-out group-data-[state=past]:bg-primary/40 group-data-[state=current]:bg-primary"
+                  />
+                </button>
+              ))}
+            </div>
+            <p data-rail-label aria-hidden="true" className="-mt-2 px-0.5 text-xs font-medium text-foreground">
+              {sceneGroups[0].label}
+            </p>
+          </nav>
+
+          <Button
+            ref={autoplayRef}
+            variant="outline"
+            size="sm"
+            aria-pressed={autoplay.isPlaying}
+            onClick={autoplay.toggle}
+            className="mt-2 shrink-0 bg-background/80 md:absolute md:right-6 md:bottom-8 md:mt-0"
+          >
+            {autoplay.isPlaying ? <Pause data-icon="inline-start" /> : <Play data-icon="inline-start" />}
+            {autoplay.isPlaying ? 'Pause' : 'Autoplay'}
+          </Button>
+        </div>
       </div>
     </div>
   )

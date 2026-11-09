@@ -1,0 +1,39 @@
+# Mark Calderon
+
+> Mark Calderon (Mark Angeo G. Calderon) is a Senior Frontend Developer with 7+ years building SPA to enterprise web applications and 80+ WordPress custom themes and landing pages, for clients in the Philippines, Japan, Australia, and the US. Open to full-time roles and freelance work.
+
+- Portfolio: https://markcalderon.github.io/
+- GitHub: https://github.com/MarkCalderon
+- LinkedIn: https://www.linkedin.com/in/markcalderon/
+- Email: markcev0@gmail.com
+- Languages: English, Tagalog, Malay
+
+## Numbers
+
+- 7+ years building for the web
+- 80+ WordPress custom themes and landing pages
+- 70+ CMS and landing pages for Commude Japan clients
+- 4 markets: Philippines, Japan, Australia, United States
+
+## Experience
+
+- Senior Developer, Saphyroo (Feb 2026 to present, remote, Victoria, Australia): legacy-to-modern stack migration, UI/UX strategy, API integrations, QA and performance delivery, AI-driven development rules.
+- Senior Frontend Developer, We Are Dotty! (Oct 2021 to Jan 2026, remote, Makati, Philippines): enterprise apps across lease management, logistics, document review, digital marketing, and content delivery. Department MVP (Q2 2025), Dottyzens of the Month (June 2022).
+- Team Lead and Front-End Web Developer, Commude Philippines (Oct 2019 to Oct 2021, Metro Manila): 70+ CMS and landing page projects with Commude Japan teams. Promoted within 6 months. MVP (Jan to Apr 2021).
+- ICT Teacher, Seri Mulia Sarjana International School (Jun 2015 to Mar 2019, Brunei): Best Class Teacher of the Month (March 2019), advised Tech Kids (Third Place, 2019) and BICTA Young Developers Award (2016) teams.
+
+## Selected projects
+
+- [Philippine Adventure Holidays](https://www.philippineadventureholidays.com/): tour reservation platform with package browsing, online booking, and custom itineraries.
+- [Barambah Organics](https://customers.barambahorganics.com.au/): customer portal for an Australian organic dairy brand.
+- [Pryce Gardens](https://prycegardens.com/): lot booking and memorial planning platform for a memorial park group in Mindanao.
+- [University of Creativity](https://uoc.world/): content delivery platform for a Tokyo creative institution.
+- [Ogawa Group](https://www.ogawagroup.co.jp/): WordPress corporate site for a Japanese real estate services group.
+
+## Stack
+
+React, TypeScript, JavaScript, Next.js, Vue, Tailwind CSS, Bootstrap, jQuery, WordPress, PHP, Node.js, GraphQL, OpenAPI, HTML5, CSS3. Tools: Git, GitHub, Bitbucket, Webpack, npm, Gulp, Babel, Figma, Sketch.
+
+## Education
+
+Oxford Brookes University, Upper Second Class Honours (2:1).

@@ -90,7 +90,7 @@ function buildScenes(): Scene[] {
         id: `work-${index}`,
         group: 'work',
         length: 1.1,
-        focal: nextFocal(index % 2 === 0 ? 420 : -420),
+        focal: nextFocal(index % 2 === 0 ? -420 : 420),
         sky: projectSky[project.title] ?? BRAND_SKY,
       }),
     ),
@@ -123,6 +123,6 @@ export function poseFor(scene: Scene, isNarrow: boolean): Pose {
   const { x, y, z } = scene.focal
   const yaw = -4 * Math.sign(x)
 
-  if (isNarrow) return { x, y: y + 160, z: z + 1400, yaw: yaw / 2 }
+  if (isNarrow) return { x, y: y + 300, z: z + 1400, yaw: yaw / 2 }
   return { x: x - 260, y, z: z + 420, yaw }
 }

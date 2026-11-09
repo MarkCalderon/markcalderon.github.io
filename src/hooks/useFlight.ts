@@ -10,7 +10,7 @@ import {
   trackAt,
   clamp01,
 } from '@/components/ScrollWorld/flightMath'
-import { poseFor, type Scene } from '@/components/ScrollWorld/scenes'
+import { poseFor, sceneGroups, type Scene } from '@/components/ScrollWorld/scenes'
 
 const narrowQuery = '(max-width: 767px)'
 
@@ -45,6 +45,8 @@ export function useFlight(rootRef: RefObject<HTMLElement | null>, scenes: Scene[
     const sceneries = Array.from(root.querySelectorAll<HTMLElement>('[data-scene-scenery]'))
     const fogged = Array.from(root.querySelectorAll<HTMLElement>('[data-fog-z]'))
     const railItems = Array.from(root.querySelectorAll<HTMLElement>('[data-rail-group]'))
+    const railLabel = root.querySelector<HTMLElement>('[data-rail-label]')
+    const groupOrder = sceneGroups.map(({ group }) => group)
     const narrow = window.matchMedia(narrowQuery)
     let poses = scenes.map((scene) => poseFor(scene, narrow.matches))
     let frame = 0
@@ -95,10 +97,25 @@ export function useFlight(rootRef: RefObject<HTMLElement | null>, scenes: Scene[
       })
 
       const group = scenes[index].group
+      const activeOrder = groupOrder.indexOf(group)
       railItems.forEach((element) => {
-        if (element.dataset.railGroup === group) element.setAttribute('aria-current', 'step')
-        else element.removeAttribute('aria-current')
+        const order = groupOrder.findIndex((name) => name === element.dataset.railGroup)
+        switch (Math.sign(order - activeOrder)) {
+          case -1:
+            element.dataset.state = 'past'
+            element.removeAttribute('aria-current')
+            break
+          case 0:
+            element.dataset.state = 'current'
+            element.setAttribute('aria-current', 'step')
+            break
+          default:
+            element.dataset.state = 'upcoming'
+            element.removeAttribute('aria-current')
+        }
       })
+      const activeLabel = sceneGroups[activeOrder]?.label ?? ''
+      if (railLabel && railLabel.textContent !== activeLabel) railLabel.textContent = activeLabel
     }
 
     const schedule = () => {

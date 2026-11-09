@@ -34,6 +34,11 @@ Visitors arrive from a link (CV, LinkedIn, proposal, email signature), often on 
 - Availability: **open to both freelance and full-time roles**, while currently Senior Developer at Saphyroo (full-time, since Feb 2026).
 - Home is a scroll world: CSS 3D camera flight through 12 scenes (intro, 5 projects, 4 roles, stack, contact) with condensed copy and an opt-in autoplay. No video generation, no tokens. Reduced motion gets the stacked page.
 
+## Discoverability
+- `index.html` carries the SEO layer: title, Open Graph image (`public/og.jpg`), JSON-LD Person (name variants Mark Angeo G. Calderon / Mark Angeo Calderon, sameAs GitHub + LinkedIn, worksFor Saphyroo), and a hidden crawlable summary inside `#root` for bots that do not run JavaScript.
+- `public/llms.txt`, `robots.txt` (AI crawlers allowed) and `sitemap.xml` sit beside it.
+- These duplicate site facts. Any content change (years, roles, projects, links) updates them too.
+
 ## Brand Commitments
 - Name: Mark Calderon. Site title: "DEV. CALDERON".
 - Contact: markcev0@gmail.com, linkedin.com/in/markcalderon, github.com/MarkCalderon.
