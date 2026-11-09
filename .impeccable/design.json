@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T03:45:49.699928+00:00",
+  "title": "Design System: DEV. CALDERON",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(0.145 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "ink-soft": {
+        "role": "primary",
+        "displayName": "Ink Soft",
+        "canonical": "oklch(0.205 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "oklch(0.269 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(0.556 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "ash": {
+        "role": "neutral",
+        "displayName": "Ash",
+        "canonical": "oklch(0.708 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(0.922 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "oklch(0.97 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "hairline-dark": {
+        "role": "neutral",
+        "displayName": "Hairline Dark",
+        "canonical": "oklch(1 0 0 / 10%)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.5 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.74 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero title only, one per page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project and role names."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero summary sentence."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions, max 65ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Categories, dates, chips; sentence case."
+      },
+      "signature": {
+        "displayName": "Signature",
+        "purpose": "Typed header name only."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Project image hover scale, 500ms."
+      },
+      {
+        "name": "signature-type",
+        "value": "steps(13, end) 1.7s",
+        "purpose": "Header name typing reveal with blinking caret."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "root-16px",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single primary action per view, e.g. Email me.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/></svg>Email me</a>",
+      "css": ".ds-btn-primary{font-family:'Geist',system-ui,sans-serif;display:inline-flex;align-items:center;gap:6px;height:2.25rem;padding:0 1rem;border-radius:.625rem;background:var(--primary,oklch(.205 0 0));color:var(--primary-foreground,oklch(.985 0 0));font-size:.875rem;font-weight:500;text-decoration:none;transition:background .15s}.ds-btn-primary:hover{background:color-mix(in oklab,var(--primary,oklch(.205 0 0)) 80%,transparent)}.ds-btn-primary:focus-visible{outline:none;box-shadow:0 0 0 3px color-mix(in oklab,var(--ring,oklch(.708 0 0)) 50%,transparent)}.ds-btn-primary:active{transform:translateY(1px)}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions and header icon buttons.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">View projects</a>",
+      "css": ".ds-btn-ghost{font-family:'Geist',system-ui,sans-serif;display:inline-flex;align-items:center;height:2.25rem;padding:0 1rem;border-radius:.625rem;background:transparent;color:var(--foreground,oklch(.145 0 0));font-size:.875rem;font-weight:500;text-decoration:none;transition:background .15s}.ds-btn-ghost:hover{background:var(--muted,oklch(.97 0 0))}.ds-btn-ghost:focus-visible{outline:none;box-shadow:0 0 0 3px color-mix(in oklab,var(--ring,oklch(.708 0 0)) 50%,transparent)}"
+    },
+    {
+      "name": "Current Badge",
+      "kind": "chip",
+      "refersTo": "badge-current",
+      "description": "Marks the current role in the experience ledger.",
+      "html": "<span class=\"ds-badge\">Current</span>",
+      "css": ".ds-badge{font-family:'Geist',system-ui,sans-serif;display:inline-flex;align-items:center;height:1.25rem;padding:.125rem .5rem;border-radius:1.625rem;background:var(--primary,oklch(.205 0 0));color:var(--primary-foreground,oklch(.985 0 0));font-size:.75rem;font-weight:500}"
+    },
+    {
+      "name": "Tech Chip",
+      "kind": "chip",
+      "refersTo": "tech-chip",
+      "description": "Static stack item: brand icon plus visible name.",
+      "html": "<span class=\"ds-chip\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" style=\"color:#06b6d4\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>React</span>",
+      "css": ".ds-chip{font-family:'Geist',system-ui,sans-serif;display:inline-flex;align-items:center;gap:.5rem;padding:.375rem .75rem;border:1px solid var(--border,oklch(.922 0 0));border-radius:.625rem;background:var(--background,oklch(1 0 0));color:var(--foreground,oklch(.145 0 0));font-size:.875rem}"
+    },
+    {
+      "name": "Project Tile",
+      "kind": "card",
+      "refersTo": "project-frame",
+      "description": "Signature component: whole tile links to the live site.",
+      "html": "<a class=\"ds-tile\" href=\"#\"><div class=\"ds-tile-frame\"></div><p class=\"ds-tile-cat\">E-commerce Dashboard</p><h3 class=\"ds-tile-title\">Barambah Organics <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></h3><p class=\"ds-tile-body\">A customer-facing portal for an Australian organic dairy brand.</p></a>",
+      "css": ".ds-tile{font-family:'Geist',system-ui,sans-serif;display:flex;flex-direction:column;gap:.5rem;max-width:22rem;border-radius:.875rem;color:inherit;text-decoration:none;outline:none}.ds-tile-frame{aspect-ratio:16/10;margin-bottom:.75rem;border-radius:.875rem;background:var(--muted,oklch(.97 0 0));box-shadow:inset 0 0 0 1px color-mix(in oklab,var(--foreground,oklch(.145 0 0)) 10%,transparent);transition:transform .5s cubic-bezier(.16,1,.3,1)}.ds-tile:hover .ds-tile-frame{transform:scale(1.03)}.ds-tile-cat,.ds-tile-body{margin:0;font-size:.875rem;color:var(--muted-foreground,oklch(.556 0 0))}.ds-tile-title{display:flex;gap:.375rem;align-items:flex-start;margin:0;font-size:1.125rem;font-weight:500;letter-spacing:-.025em;color:var(--foreground,oklch(.145 0 0))}.ds-tile-title svg{margin-top:.25rem;color:var(--muted-foreground,oklch(.556 0 0));transition:transform .2s}.ds-tile:hover .ds-tile-title svg{transform:translate(2px,-2px);color:var(--foreground,oklch(.145 0 0))}.ds-tile:focus-visible{box-shadow:0 0 0 4px var(--background,#fff),0 0 0 7px color-mix(in oklab,var(--ring,oklch(.708 0 0)) 50%,transparent)}@media (prefers-reduced-motion:reduce){.ds-tile-frame,.ds-tile-title svg{transition:none}}"
+    },
+    {
+      "name": "Experience Row",
+      "kind": "custom",
+      "description": "Ledger row: date column plus role details.",
+      "html": "<div class=\"ds-row\"><p class=\"ds-row-date\">Oct 2019 - Oct 2021</p><div><h3 class=\"ds-row-title\">Team Lead | Front-End Web Developer</h3><p class=\"ds-row-co\">Commude Philippines</p><p class=\"ds-row-body\">Built 70+ CMS and landing page projects.</p></div></div>",
+      "css": ".ds-row{font-family:'Geist',system-ui,sans-serif;display:grid;grid-template-columns:11rem 1fr;gap:2.5rem;padding:2rem 0;border-top:1px solid var(--border,oklch(.922 0 0))}.ds-row p,.ds-row h3{margin:0}.ds-row-date,.ds-row-body{font-size:.875rem;color:var(--muted-foreground,oklch(.556 0 0));font-variant-numeric:tabular-nums}.ds-row-title{font-size:1.125rem;font-weight:500;letter-spacing:-.025em;color:var(--foreground,oklch(.145 0 0))}.ds-row-co{font-size:.875rem;margin:.25rem 0 .75rem!important;color:color-mix(in oklab,var(--foreground,oklch(.145 0 0)) 80%,transparent)}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "description": "Typed signature left, contact icon buttons right.",
+      "html": "<header class=\"ds-header\"><span class=\"ds-sig\">Mark Calderon</span><a class=\"ds-icon\" href=\"#\" aria-label=\"Email\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/></svg></a></header>",
+      "css": ".ds-header{display:flex;align-items:center;justify-content:space-between;height:4rem;max-width:40rem}.ds-sig{font-family:ui-monospace,monospace;font-size:.875rem;font-weight:500;color:var(--chart-2,oklch(.556 0 0));border-right:2px solid currentColor;padding-right:2px}.ds-icon{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:.625rem;color:var(--muted-foreground,oklch(.556 0 0))}.ds-icon:hover{background:var(--muted,oklch(.97 0 0));color:var(--foreground,oklch(.145 0 0))}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Shipped Ledger",
+    "overview": "**Creative North Star: \"The Shipped Ledger\"**\n\nThe site is a plain, exact record of work delivered. Every section reads like a ledger entry: what was built, for whom, when, and what it did. The work itself carries the colour (client screenshots, tool brand icons); the frame around it stays monochrome so nothing competes with the proof.\n\nWarm and confident, not cold. Warmth comes from Geist, a humanist sans with soft terminals, the typed-out name in the header, and copy written in first-hand plain language. Confidence comes from scale and restraint: one large title, generous section spacing, and no decoration asking for attention. Density is moderate. Each block answers one question and stops.\n\nDepth is flat. Structure comes from spacing first, then hairline rules and 1px rings. Cards are not the default container; content groups by proximity.",
+    "keyCharacteristics": [
+      "Monochrome neutral frame (chroma 0), colour only from the work and brand icons.",
+      "Geist throughout; monospace reserved for the typed signature.",
+      "Flat surfaces, hairline dividers, 1px rings around imagery.",
+      "Left-aligned, single 64rem column with large vertical rhythm.",
+      "Light and dark follow the system setting, same hierarchy in both."
+    ],
+    "rules": [
+      {
+        "name": "The Work Carries the Colour Rule",
+        "body": "The frame has zero chroma. Colour appears only inside project screenshots and the tech brand icons. Never add a brand accent to headings, links, buttons, or backgrounds.",
+        "section": "colors"
+      },
+      {
+        "name": "The Icon Contrast Rule",
+        "body": "Tech brand icons keep their brand hue, but any hue at 600 or darker gets a 400-level `dark:` variant so it holds 3:1 on Ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "No small uppercase tracked labels above headings. Headings stand alone; a short sentence-case description may sit under them.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Geist for everything except the header signature. Monospace never appears as \"technical\" decoration elsewhere.",
+        "section": "typography"
+      },
+      {
+        "name": "The Exact Cell Rule",
+        "body": "Grids hold exactly as many cells as there is content. Five projects means one featured plus four, never a lone orphan tile.",
+        "section": "layout"
+      },
+      {
+        "name": "The No Shadow Rule",
+        "body": "No `box-shadow` at rest or on hover. If something needs separation, add space first, then a hairline. A shadow is never the answer.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** let screenshots and brand icons be the only colour on the page.",
+      "**Do** group by spacing first; reach for a hairline only when spacing is not enough.",
+      "**Do** keep every grid at exact cell count (featured plus pairs).",
+      "**Do** give every interactive tile one link target, a visible focus ring, and a reduced-motion fallback.",
+      "**Do** check light and dark at 375px and 1440px before calling a change done."
+    ],
+    "donts": [
+      "**Don't** wrap sections in cards or nest cards inside cards.",
+      "**Don't** add shadows, glows, or gradient text.",
+      "**Don't** use uppercase tracked eyebrows or section numbers.",
+      "**Don't** use monospace outside the header signature.",
+      "**Don't** use em-dashes in any visible copy; use commas or hyphens.",
+      "**Don't** ship full-page screenshots; crop to the visible top area and serve webp."
+    ]
+  }
+}

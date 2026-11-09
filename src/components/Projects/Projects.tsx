@@ -1,121 +1,81 @@
-import { ExternalLink } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import imgPah from '@/assets/projects/philippine-adventure-holidays.png'
-import imgBarambah from '@/assets/projects/barambah-organics.png'
-import imgPryce from '@/assets/projects/pryce-gardens.png'
-import imgUoc from '@/assets/projects/uoc-world.png'
-import imgOgawa from '@/assets/projects/ogawa-group.png'
+import { ArrowUpRight } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { projects, type Project } from './projectData'
 
-type Project = {
-  title: string
-  category: string
-  description: string
-  url: string
-  screenshot: string
+type ProjectTileProps = {
+  project: Project
+  featured?: boolean
 }
 
-const projects: Project[] = [
-  {
-    title: 'Philippine Adventure Holidays',
-    category: 'Tour Reservation System',
-    description:
-      'A full-featured tour reservation platform for a Philippines-based travel agency. Supports package browsing, online booking, and customized itineraries covering island hopping, diving, corporate travel, and destination experiences.',
-    url: 'https://www.philippineadventureholidays.com/',
-    screenshot: imgPah,
-  },
-  {
-    title: 'Barambah Organics',
-    category: 'E-commerce Dashboard',
-    description:
-      'A customer-facing portal for an Australian organic dairy brand. Provides authenticated account management, order access, and self-service features in a clean, streamlined dashboard experience.',
-    url: 'https://customers.barambahorganics.com.au/',
-    screenshot: imgBarambah,
-  },
-  {
-    title: 'Pryce Gardens',
-    category: 'Lot Booking & Purchase System',
-    description:
-      'An online lot booking and memorial planning platform for a memorial park group in Mindanao, Philippines. Enables families to browse and reserve burial lots, explore pre-planning options, and manage service inquiries.',
-    url: 'https://prycegardens.com/',
-    screenshot: imgPryce,
-  },
-  {
-    title: 'University of Creativity',
-    category: 'Content Management & Delivery',
-    description:
-      'A content delivery platform for a Tokyo-based cross-disciplinary creative institution. Powers seminar programs, research publication, event management, and community engagement across the UoC ecosystem.',
-    url: 'https://uoc.world/',
-    screenshot: imgUoc,
-  },
-  {
-    title: 'Ogawa Group',
-    category: 'WordPress Corporate Site',
-    description:
-      'A corporate WordPress site for a Japanese real estate services group established in 1988. Covers land registration, surveying, inheritance transfers, and urban redevelopment consulting across a group of specialized professional entities.',
-    url: 'https://www.ogawagroup.co.jp/',
-    screenshot: imgOgawa,
-  },
-]
+function ProjectTile({ project, featured = false }: ProjectTileProps) {
+  return (
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(
+        'group flex flex-col gap-5 rounded-xl outline-none focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background',
+        featured && 'md:grid md:grid-cols-5 md:items-center md:gap-10'
+      )}
+    >
+      <div
+        className={cn(
+          'overflow-hidden rounded-xl bg-muted ring-1 ring-foreground/10',
+          featured ? 'aspect-video md:col-span-3' : 'aspect-16/10'
+        )}
+      >
+        <img
+          src={project.screenshot}
+          alt={`${project.title} website screenshot`}
+          className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+          loading={featured ? 'eager' : 'lazy'}
+        />
+      </div>
+      <div className={cn('flex flex-col gap-2', featured && 'md:col-span-2')}>
+        <p className="text-sm text-muted-foreground">{project.category}</p>
+        <h3
+          className={cn(
+            'flex items-start gap-1.5 font-medium tracking-tight text-foreground',
+            featured ? 'text-2xl' : 'text-lg'
+          )}
+        >
+          {project.title}
+          <ArrowUpRight
+            aria-hidden="true"
+            className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground motion-reduce:transition-none"
+          />
+          <span className="sr-only">(opens in a new tab)</span>
+        </h3>
+        <p className="max-w-prose text-sm leading-relaxed text-pretty text-muted-foreground">
+          {project.description}
+        </p>
+      </div>
+    </a>
+  )
+}
 
 function Projects() {
+  const [featured, ...rest] = projects
+
   return (
-    <Card className="border-chart-3/25 text-left">
-      <CardHeader>
-        <CardTitle>Projects</CardTitle>
-        <CardDescription>
+    <section id="projects" aria-labelledby="projects-title" className="flex scroll-mt-8 flex-col gap-10">
+      <div className="flex flex-col gap-2">
+        <h2 id="projects-title" className="text-2xl font-medium tracking-tight text-foreground md:text-3xl">
+          Projects
+        </h2>
+        <p className="max-w-prose text-base text-muted-foreground">
           A selection of client and production web systems delivered across different industries.
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="grid gap-4 sm:grid-cols-2">
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className="group flex flex-col overflow-hidden rounded-lg border border-border/60 bg-muted/30 transition-colors hover:border-border"
-            >
-              <div className="relative aspect-video overflow-hidden bg-muted">
-                <img
-                  src={project.screenshot}
-                  alt={`${project.title} screenshot`}
-                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex flex-1 flex-col gap-2 p-4">
-                <Badge variant="secondary" className="w-fit text-xs">
-                  {project.category}
-                </Badge>
-                <p className="font-medium leading-tight text-foreground">
-                  {project.title}
-                </p>
-                <p className="flex-1 text-xs leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-                <Button
-                  asChild
-                  variant="ghost"
-                  size="sm"
-                  className="-ml-2 mt-1 w-fit text-xs text-muted-foreground"
-                >
-                  <a href={project.url} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-1.5 size-3" />
-                    Visit Site
-                  </a>
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
+        </p>
+      </div>
+
+      <ProjectTile project={featured} featured />
+
+      <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2">
+        {rest.map((project) => (
+          <ProjectTile key={project.title} project={project} />
+        ))}
+      </div>
+    </section>
   )
 }
 
